@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.navbar{
+    background-color: #fff;
+    height: 80px;
+    margin: 10px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.navbar-brand{
+    font-weight: 500;
+    color: #009970;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.login-button, .register-button{
+    background-color: #009970;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s #009980;
+}
+
+.login-button:hover{
+    background-color: #00b383;
+}
+
+.register-button{
+    background-color: black;
+    color: white;
+}
+
+.register-button:hover{
+    background-color: #000000c9;
+    color: white;
+}
+
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active{
+    color: #000;
+}
+
+@media only screen and (min-width:991px) {
+    .navbar.dragged {
+        margin: 0; /* Thay đổi margin thành 0px khi trang được kéo xuống */
+        border-radius: 0;
+    }
+    .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #009970;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .nav-link:hover::before, .nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.bg-section{
+    background: url(img/bg-header.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg-section::before{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.bg-section .container{
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+/* Section */
+/* Travel Guide */
+.swiper-button-prev, .swiper-button-next{
+    background-color: #fff;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    top: var(--swiper-navigation-top-offset, 55%);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 15px;
+}
+
+.swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 40px);
+}
