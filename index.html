@@ -73,8 +73,13 @@
                             <a class="nav-link text-white fs-5" href="#">LIÊN HỆ</a>
                         </li>
                     </ul>
-                    <h6>Thành phố, địa điểm hoặc khách sạn:</h6>
-                </div>
+                    <div class="search-box">
+                      <div class="row-search">
+                        <img class="me-2" src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/3/3209d15f1ca7489d70345b1c6ef5832e.svg" alt="">
+                        <input type="text" id="input-box" placeholder="Thành phố, khách sạn, điểm đến" autocomplete="off">
+                      </div>
+                      <div class="result-box text-black"></div>
+                    </div>
             </section>  
         </header>
    
@@ -82,47 +87,45 @@
             <section class="travel-guide mt-3">
                 <div class="container">
                     <div class="swiper card_slider">
-                        <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
-                          <!-- Slides -->
                           <div class="swiper-slide">
                             <div class="img_box">
-                                <img src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/08/1709895400213-dd7c4e8f6baa6e8f1a5740969ee22fd9.png?tr=q-75,w-285" alt="">
+                                <img class="img_guide" src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/08/1709895400213-dd7c4e8f6baa6e8f1a5740969ee22fd9.png?tr=q-75,w-285" alt="">
                             </div>
                           </div>
                           <div class="swiper-slide">
                             <div class="img_box">
-                                <img src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709549069066-30aedcd76bef5b49e3848731f0baaa9e.png?tr=q-75,w-285" alt="">
+                                <img class="img_guide" src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709549069066-30aedcd76bef5b49e3848731f0baaa9e.png?tr=q-75,w-285" alt="">
                             </div>
                           </div>
                           <div class="swiper-slide">
                             <div class="img_box">
-                                <img src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709549132046-e7598831ae2a51da0fb05d43593d63bb.png?tr=q-75,w-285" alt="">
+                                <img class="img_guide" src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709549132046-e7598831ae2a51da0fb05d43593d63bb.png?tr=q-75,w-285" alt="">
                             </div>
                           </div>
                           <div class="swiper-slide">
                             <div class="img_box">
-                                <img src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709553145619-c0b53d4017818c89211592bc0b3ffdd8.png?tr=q-75,w-285" alt="">
+                                <img class="img_guide" src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709553145619-c0b53d4017818c89211592bc0b3ffdd8.png?tr=q-75,w-285" alt="">
                             </div>
                           </div>
                           <div class="swiper-slide">
                             <div class="img_box">
-                                <img src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709553164238-aa6c992776d3b8dd364a4550aa542fe0.png?tr=q-75,w-285" alt="">
+                                <img class="img_guide" src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709553164238-aa6c992776d3b8dd364a4550aa542fe0.png?tr=q-75,w-285" alt="">
                             </div>
                           </div>
                           <div class="swiper-slide">
                             <div class="img_box">
-                                <img src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709553187951-4b0a038f6b06afd5c37b9466f1fd4823.png?tr=q-75,w-285" alt="">
+                                <img class="img_guide" src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709553187951-4b0a038f6b06afd5c37b9466f1fd4823.png?tr=q-75,w-285" alt="">
                             </div>
                           </div>
                           <div class="swiper-slide">
                             <div class="img_box">
-                                <img src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709553199875-ef0c16f14a33119a37048d62ea56c10e.png?tr=q-75,w-285" alt="">
+                                <img class="img_guide" src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709553199875-ef0c16f14a33119a37048d62ea56c10e.png?tr=q-75,w-285" alt="">
                             </div>
                           </div>
                           <div class="swiper-slide">
                             <div class="img_box">
-                                <img src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709553205034-a04592780a42e518ebf26899dd81eb8c.png?tr=q-75,w-285" alt="">
+                                <img class="img_guide" src="https://ik.imagekit.io/tvlk/image/imageResource/2024/03/04/1709553205034-a04592780a42e518ebf26899dd81eb8c.png?tr=q-75,w-285" alt="">
                             </div>
                           </div>
                         </div>
@@ -142,61 +145,117 @@
                 <div class="container mt-3">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
-                          <div class="card h-100">
-                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/14/1686721948003-7928a0b56734caaca663b9239cde96da.png?tr=q-75,w-427" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Việt Nam</h5>
-                              <p class="card-text">16,763 accommodations</p>
+                          <div class="card text-white">
+                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/14/1686721948003-7928a0b56734caaca663b9239cde96da.png?tr=q-75,w-427" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title mt-3 fw-bold">Việt Nam</h5>
+                              <p class="card-text"><small>16,763 accommodations</small></p>
                             </div>
                           </div>
                         </div>
                         <div class="col">
-                          <div class="card h-100">
-                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/05/29/1685329328194-3d7df8cb31d4a3bf69f10209ba8402ec.png?tr=q-75,w-427" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Thái Lan</h5>
-                              <p class="card-text">27,449 accommodations</p>
+                          <div class="card text-white">
+                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/05/29/1685329328194-3d7df8cb31d4a3bf69f10209ba8402ec.png?tr=q-75,w-427" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title mt-3 fw-bold">Thái Lan</h5>
+                              <p class="card-text"><small>27,449 accommodations</small></p>
                             </div>
                           </div>
                         </div>
                         <div class="col">
-                          <div class="card h-100">
-                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/14/1686722015787-18de277528bf9856fc61a3be4cfe4a4e.png?tr=q-75,w-427" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Singapore</h5>
-                              <p class="card-text">644 accommodations</p>
+                          <div class="card text-white">
+                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/14/1686722015787-18de277528bf9856fc61a3be4cfe4a4e.png?tr=q-75,w-427" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title mt-3 fw-bold">Singapore</h5>
+                              <p class="card-text"><small>644 accommodations</small></p>
                             </div>
                           </div>
                         </div>
                         <div class="col">
-                          <div class="card h-100">
-                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/05/29/1685328965749-d622f5f8496a6dc11d9b1aca65c6d58e.png?tr=q-75,w-427" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Malaysia</h5>
-                              <p class="card-text">8,371 accommodations</p>
+                          <div class="card text-white">
+                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/05/29/1685328965749-d622f5f8496a6dc11d9b1aca65c6d58e.png?tr=q-75,w-427" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title mt-3 fw-bold">Malaysia</h5>
+                              <p class="card-text"><small>8,371 accommodations</small></p>
                             </div>
                           </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100">
-                              <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/01/1685626590562-f7fc1564035ab9e353099a96c659b5c1.png?tr=q-75,w-427" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Indonesia</h5>
-                                <p class="card-text">53,405 accommodations</p>
-                              </div>
+                          <div class="card text-white">
+                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/01/1685626590562-f7fc1564035ab9e353099a96c659b5c1.png?tr=q-75,w-427" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title mt-3 fw-bold">Indonesia</h5>
+                              <p class="card-text"><small>53,405 accommodations</small></p>
                             </div>
                           </div>
-                          <div class="col">
-                            <div class="card h-100">
-                              <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/01/1685626793768-ea048e16aff039145ae995a58a35cffd.png?tr=q-75,w-427" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Hàn Quốc</h5>
-                                <p class="card-text">15,929 accommodations</p>
-                              </div>
+                        </div>
+                        <div class="col">
+                          <div class="card text-white">
+                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/01/1685626793768-ea048e16aff039145ae995a58a35cffd.png?tr=q-75,w-427" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <h5 class="card-title mt-3 fw-bold">Hàn Quốc</h5>
+                              <p class="card-text"><small>15,929 accommodations</small></p>
                             </div>
                           </div>
+                        </div>
                       </div>
+                    </div>
                 </div>
+            </section>
+            <section class="travel-international mt-3">
+              <div class="container d-flex align-items-center">
+                <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/01/1685632370538-63ea09621bb19474f36a8e6a994f4ab9.png?_src=imagekit&tr=q-40,h-24" alt="">
+                <h4 class="mx-2">Du hành quốc tế: nhận hướng dẫn</h4>
+              </div>
+              <div class="container">
+                <div class="row row-cols-2 row-cols-md-5 g-4">
+                  <div class="col">
+                    <div class="card text-white">
+                      <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/15/1686809745816-f79a1d39bd05dff74a28980cbb7875b1.png?tr=q-75,w-256" class="card-img w-100 h-100 object-fit-cover" alt="...">
+                      <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
+                        <h6 class="card-title">Bali</h6>
+                        <p class="card-text"><small>Indonesla</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card text-white">
+                      <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/15/1686809749394-d6cd1791d20b3255f25cb3fb7a191acc.png?tr=q-75,w-256" class="card-img w-100 h-100 object-fit-cover" alt="...">
+                      <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
+                        <h6 class="card-title">Bangkok</h6>
+                        <p class="card-text"><small>Thailand</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card text-white">
+                      <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/15/1686809753588-b7415ac732c452b9207632846e6c4c3b.png?tr=q-75,w-256" class="card-img w-100 h-100 object-fit-cover" alt="...">
+                      <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
+                        <h6 class="card-title">Seoul</h6>
+                        <p class="card-text"><small>South Korea</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card text-white">
+                      <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/15/1686809757422-818b6a6738fa9d78685617becf7e9428.png?tr=q-75,w-256" class="card-img w-100 h-100 object-fit-cover" alt="...">
+                      <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
+                        <h6 class="card-title">Istanbul</h6>
+                        <p class="card-text"><small>Turkey</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card text-white">
+                      <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/15/1686809760542-61384b1b7393cf68b60b740abd903861.png?tr=q-75,w-256" class="card-img w-100 h-100 object-fit-cover" alt="...">
+                      <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
+                        <h6 class="card-title">Liverpool</h6>
+                        <p class="card-text"><small>Unlted Kingdom</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
         </main>
         <footer>
@@ -248,9 +307,22 @@
                         nextButton.style.display = 'flex'; // Hiển thị nút next nếu không ở slide cuối cùng
                     }
                 }
-            }
+            },
+             breakpoints: {
+              768: {
+                  slidesPerView: 3, 
+                  spaceBetween: 10 
+              },
+              576: {
+                  slidesPerView: 2, 
+                  spaceBetween: 50 
+              },
+              375: {
+                  slidesPerView: 1, 
+                  spaceBetween: 80 
+              }
+          }
         });
-
         </script>
         <script>
             window.addEventListener('scroll', function() {
@@ -263,5 +335,6 @@
                 }
             });
         </script>
+        <script src="autocomplete.js"></script>
     </body>
 </html>
