@@ -115,6 +115,7 @@
 /* Section */
 /* Travel Guide */
 .swiper-button-prev, .swiper-button-next{
+    padding: 20px;
     background-color: #fff;
     border-radius: 25px;
     width: 25px;
@@ -124,6 +125,7 @@
 
 .swiper-button-next:after, .swiper-button-prev:after{
     font-size: 15px;
+    font-weight: 700;
 }
 
 .swiper-button-next {
@@ -194,4 +196,140 @@ input{
 .result-box {
     max-height: 300px;
     overflow-y: scroll;
+}
+
+/* Footer */
+.w3l-footer-29-main {
+    background: #f5f6f8 ;
+    display: flex;
+    justify-content: space-between; /* Phân phối khoảng cách giữa các phần tử */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+
+.footer-29 {
+    width: 100%; 
+}
+
+.footer-top-29 {
+    display: flex;
+    justify-content: space-between; /* Phân phối khoảng cách giữa các phần tử con */
+    align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+}
+
+.footer-list-29 {
+    flex: 1; /* Chiếm toàn bộ không gian có sẵn ở góc trái */
+}
+
+.main-social-footer-29 {
+    flex: 1; /* Chiếm toàn bộ không gian có sẵn ở góc phải */
+    text-align: right; /* Căn phải nội dung */
+    padding-bottom: 30px;
+}
+
+.footer-logo img {
+    max-width: 100%; /* Đảm bảo logo không vượt quá kích thước của phần tử chứa */
+}
+
+.main-social-footer-29 a {
+    margin-left: 10px; /* Khoảng cách giữa các liên kết mạng xã hội */
+}
+
+.main-social-footer-29 h5 {
+    margin-bottom: 10px; /* Khoảng cách giữa tiêu đề và các liên kết */
+}
+
+.main-social-footer-29 a {
+    margin-right: 10px;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    background: white;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .w3l-copyright {
+    padding: 1.2em 0;
+    border-top: 1px solid #fff;
+    background: #f5f6f8;
+  }
+  
+  .w3l-copyright p.copy-footer-29 {
+    align-self: center;
+    color: black;
+    font-size: 17px;
+  }
+  
+  .w3l-copyright .copy-footer-29 a {
+    color: #009970;
+  }
+  
+  .w3l-copyright .copy-footer-29 a:hover {
+    color: #009980;
+  }
+
+  .w3l-footer-29-main .footer-list-29 ul li a, .w3l-footer-29-main .footer-list-29 ul li p, .w3l-copyright .footer-list-29 ul li a {
+    font-size: 17px;
+    line-height: 26px;
+    color: black;
+}
+
+.backToTop {
+    width: 50px;
+    height: 50px;
+    background: #009970;
+    border-radius: 8px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    color: #fff;
+    transition: all .2s;
+    box-shadow: -4px 4px 24px -10px #009970;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.backToTop:hover {
+    color: grey;
+}
+
+.cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1024px){
+    .logo-bzk{
+        width: 100px;
+        height: 100px;
+    }
+    .footer-list-29 {
+        flex: none; /* Chiếm toàn bộ không gian có sẵn ở góc trái */
+    }
+    .w3l-copyright .footer-list-29 ul li a{
+        font-size: 16px;
+    }
+    .w3l-copyright .footer-list-29 ul{
+        flex-direction: column;
+        padding: 0;
+    }
+    .main-social-footer-29 h5 {
+        font-size: 18px;
+    }
+}
+
+.footer-list-29 ul li{
+    list-style: none;
 }
