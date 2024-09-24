@@ -6,8 +6,57 @@
     <title>Đặt phòng của bạn</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/DatPhong.css">
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    <link rel="icon" href="img/logo.png"/>
 </head>
 <body>
+    <header>
+        <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a class="navbar-brand me-auto" href="index.html">
+                    <img src="img/logo.png" alt="" width="80" height="70">Bazoka
+                </a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <img src="img/logo.png" alt="" width="80" height="60">Bazoka
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 active" aria-current="page" href="#">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#">Liên hệ dịch vụ khách hàng</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link mx-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Hỗ trợ
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Trợ giúp</a></li>
+                                    <li><a class="dropdown-item" href="#">Liên hệ chúng tôi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="login-button me-2" href="#">Đăng nhập</a>
+                <a class="register-button" href="#">Đăng ký</a>
+                <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>    
+    </header>
+
     <div class="container my-4">
         <h2>Đặt phòng của bạn</h2>
         <p>Hãy đảm bảo tất cả thông tin chi tiết trên trang này đã chính xác trước khi tiến hành thanh toán.</p>
@@ -165,7 +214,12 @@
                         <span>Tổng giá</span>
                         <span>2,506,263 VND</span>
                     </div>
-                    <button class="continue-btn">Tiếp tục thanh toán</button>
+                     <!-- Nút tiếp tục thanh toán -->
+                <button id="btnDatPhong" class="continue-btn">Tiếp tục thanh toán</button>
+                <!-- Thông báo sau khi đặt phòng thành công -->
+                <div id="thongBaoDatPhong" class="alert alert-success" style="display: none; margin-top: 20px;">
+                    Đặt phòng thành công! Cảm ơn bạn đã đặt phòng tại khách sạn của chúng tôi.
+                </div>
                 </div>
 
             </div>

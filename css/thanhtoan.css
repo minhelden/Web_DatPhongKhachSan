@@ -17,8 +17,7 @@ body {
 }
 
 .header .timer {
-    background-color: #21d07a;
-    color: white;
+    color: rgb(62, 247, 6);
     padding: 3px 8px;
     border-radius: 4px;
     margin-left: 10px;
@@ -98,12 +97,12 @@ body {
 
 .total-price {
     font-size: 1.6rem;
-    color: #ff5a5a;
+    color: #0e2a77;
     font-weight: bold;
 }
 
 .pay-button {
-    background-color: #ff5a5a;
+    background-color: #0e2a77;
     color: white;
     padding: 12px 20px;
     border-radius: 5px;
@@ -113,8 +112,8 @@ body {
 }
 
 .pay-button:hover {
-    background-color: #e14e4e;
-}
+    background-color: #0e2a77;
+    }
 
 .discount-code {
     margin: 20px 0;
@@ -145,7 +144,7 @@ body {
     border: 1px solid #f5c6a5;
     text-align: center;
     font-style: italic;
-    color: #d98c3f; /* Màu chữ nổi bật */
+    color: #ca741e; /* Màu chữ nổi bật */
 }
 
 .holiday-message p {
