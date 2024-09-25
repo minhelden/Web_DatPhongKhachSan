@@ -1,0 +1,87 @@
+#room-items .row .col{
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid lightgray;
+}
+
+.a{
+    margin-right: 0px;
+    margin-left: 4px;
+    width: inherit;
+    height: inherit;
+    position: relative;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: inherit;
+    color: rgb(83, 146, 249);
+}
+
+label {
+    display: inline-flex; 
+    align-items: center; 
+    margin-right: 15px; 
+}
+
+.price-original{
+    text-decoration: line-through;
+}
+
+.price-discount{
+    color: red;
+}
+
+.room-comment{
+    font-size: 12px;
+    color: lightgray;
+}
+
+.room-rate{
+    line-height: 20px;
+}
+
+#room-items .row .col.room-info{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 260px;
+    cursor: pointer;
+}
+
+.room-location{
+    color: #5392f9;
+    font-size: 14px;
+}
+
+.b{ 
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.c{
+    fill: rgb(83, 146, 249);
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 12px;
+
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.d {
+    margin-right: 0px;
+    margin-left: 8px;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    order: 1;
+    display: flex;
+}

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>  
-        <link rel="icon" href="img/logo.png"/>
+        <link rel="icon" href="/img/logo.png"/>
         <title>Bazoka - Nền tảng du lịch hàng đầu thế giới</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
@@ -20,13 +20,13 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
         <header>
             <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
                 <div class="container">
-                  <a class="navbar-brand me-auto" href="index.html"><img src="img/logo.png" alt="" width="80" height="70">Bazoka</a>         
+                  <a class="navbar-brand me-auto" href="index.html"><img src="/img/logo.png" alt="" width="80" height="70">Bazoka</a>         
                   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                       <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="img/logo.png" alt="" width="80" height="60">Bazoka</h5>
@@ -134,123 +134,23 @@
                       </div>
                 </div>
             </section>
-            <section class="travel-country mt-3">
+            <section class="travel-country mt-3" >
                 <div class="container d-flex align-items-center">
                     <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/01/1685631988109-4e2f068146d14d35aa47c5e9e9add5ff.png?_src=imagekit&tr=q-40,h-24" alt="">
                     <h4 class="mx-2">Tái khám phá bản thân ở Châu Á và những nơi khác</h4>
                 </div>
                 <div class="container mt-3">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col">
-                          <div class="card text-white">
-                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/14/1686721948003-7928a0b56734caaca663b9239cde96da.png?tr=q-75,w-427" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                              <h5 class="card-title mt-3 fw-bold">Việt Nam</h5>
-                              <p class="card-text"><small>16,763 accommodations</small></p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="card text-white">
-                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/05/29/1685329328194-3d7df8cb31d4a3bf69f10209ba8402ec.png?tr=q-75,w-427" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                              <h5 class="card-title mt-3 fw-bold">Thái Lan</h5>
-                              <p class="card-text"><small>27,449 accommodations</small></p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="card text-white">
-                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/14/1686722015787-18de277528bf9856fc61a3be4cfe4a4e.png?tr=q-75,w-427" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                              <h5 class="card-title mt-3 fw-bold">Singapore</h5>
-                              <p class="card-text"><small>644 accommodations</small></p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="card text-white">
-                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/05/29/1685328965749-d622f5f8496a6dc11d9b1aca65c6d58e.png?tr=q-75,w-427" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                              <h5 class="card-title mt-3 fw-bold">Malaysia</h5>
-                              <p class="card-text"><small>8,371 accommodations</small></p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="card text-white">
-                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/01/1685626590562-f7fc1564035ab9e353099a96c659b5c1.png?tr=q-75,w-427" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                              <h5 class="card-title mt-3 fw-bold">Indonesia</h5>
-                              <p class="card-text"><small>53,405 accommodations</small></p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="card text-white">
-                            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/01/1685626793768-ea048e16aff039145ae995a58a35cffd.png?tr=q-75,w-427" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                              <h5 class="card-title mt-3 fw-bold">Hàn Quốc</h5>
-                              <p class="card-text"><small>15,929 accommodations</small></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div id="country" class="row row-cols-1 row-cols-md-3 g-4">
+                  </div>
                 </div>
             </section>
             <section class="travel-international mt-3">
               <div class="container d-flex align-items-center">
                 <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/01/1685632370538-63ea09621bb19474f36a8e6a994f4ab9.png?_src=imagekit&tr=q-40,h-24" alt="">
-                <h4 class="mx-2">Du hành quốc tế: nhận hướng dẫn</h4>
+                <h4 class="mx-2">Du lịch trong nước: chọn nơi bạn muốn đến</h4>
               </div>
               <div class="container">
-                <div class="row row-cols-2 row-cols-md-5 g-4">
-                  <div class="col">
-                    <div class="card text-white">
-                      <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/15/1686809745816-f79a1d39bd05dff74a28980cbb7875b1.png?tr=q-75,w-256" class="card-img w-100 h-100 object-fit-cover" alt="...">
-                      <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
-                        <h6 class="card-title">Bali</h6>
-                        <p class="card-text"><small>Indonesla</small></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card text-white">
-                      <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/15/1686809749394-d6cd1791d20b3255f25cb3fb7a191acc.png?tr=q-75,w-256" class="card-img w-100 h-100 object-fit-cover" alt="...">
-                      <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
-                        <h6 class="card-title">Bangkok</h6>
-                        <p class="card-text"><small>Thailand</small></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card text-white">
-                      <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/15/1686809753588-b7415ac732c452b9207632846e6c4c3b.png?tr=q-75,w-256" class="card-img w-100 h-100 object-fit-cover" alt="...">
-                      <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
-                        <h6 class="card-title">Seoul</h6>
-                        <p class="card-text"><small>South Korea</small></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card text-white">
-                      <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/15/1686809757422-818b6a6738fa9d78685617becf7e9428.png?tr=q-75,w-256" class="card-img w-100 h-100 object-fit-cover" alt="...">
-                      <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
-                        <h6 class="card-title">Istanbul</h6>
-                        <p class="card-text"><small>Turkey</small></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card text-white">
-                      <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/15/1686809760542-61384b1b7393cf68b60b740abd903861.png?tr=q-75,w-256" class="card-img w-100 h-100 object-fit-cover" alt="...">
-                      <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
-                        <h6 class="card-title">Liverpool</h6>
-                        <p class="card-text"><small>Unlted Kingdom</small></p>
-                      </div>
-                    </div>
-                  </div>
+                <div class="row row-cols-2 row-cols-md-5 g-4" id="province">
                 </div>
               </div>
             </section>
@@ -262,7 +162,7 @@
                       <div class="row footer-top-29">
                           <div class=" footer-list-29 footer-1 pr-lg-5 mt-3">
                               <div class="footer-logo mb-3">
-                                  <a href="#" class="navbar-brand"><img class="logo-bzk" src="img/logo.png" alt="" width="150" height="150">Bazoka</a>
+                                  <a href="#" class="navbar-brand"><img class="logo-bzk" src="/img/logo.png" alt="" width="150" height="150">Bazoka</a>
                               </div>
                           </div>
                           <div class="col-lg-2 col-md-6 col-sm-5 col-6 mt-sm-0 mt-3 main-social-footer-29">
@@ -322,6 +222,9 @@
             crossorigin="anonymous"
         ></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+        integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script type="text/javascript">
            const mySwiper = new Swiper(".card_slider", {
             slidesPerView: 4,
@@ -387,7 +290,7 @@
                 }
             });
         </script>
-        <script src="autocomplete.js"></script>
+        <script src="/js/autocomplete.js"></script>
         <script>
           document.addEventListener('scroll', function() {
           var backToTopButton = document.querySelector('.cd-top');
@@ -398,6 +301,9 @@
           }
       });
       </script>
-        <script src="modernizr-2.6.2.min.js"></script>
+      <script src="/js/modernizr-2.6.2.min.js"></script>
+      <script src="/js/class.js"></script>
+      <script src="/services/callApi.js"></script>
+      <script src="/js/index.js"></script>
     </body>
 </html>
