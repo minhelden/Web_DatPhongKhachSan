@@ -216,3 +216,25 @@ function handleSearch(event) {
 
 document.querySelector('.search-bar form').addEventListener('submit', handleSearch);
 
+function showSpinner() {
+    getElement("#loading-spinner").classList.remove("hidden");
+}
+
+function hideSpinner() {
+    getElement("#loading-spinner").classList.add("hidden");
+}
+
+function logout() {
+    showSpinner();
+    localStorage.removeItem('localStorageToken');  
+    setTimeout(function() {
+        hideSpinner(); 
+        window.location.href = "index.html";
+    }, 500);
+}
+
+document.getElementById("logoutButton").addEventListener("click", function() {
+    logout();
+});
+
+
