@@ -26,3 +26,29 @@ class KHACHSAN{
         this.MA_VITRI_VITRI = MA_VITRI_VITRI;
     }
 }
+
+class NGUOIDUNG{
+    constructor(MA_ND, HOTEN_ND, EMAIL, MATKHAU, SDT_ND, NGAYSINH, GIOITINH, CHUCVU, NGAYDANGKY, ANHDAIDIEN){
+        this.MA_ND = MA_ND;
+        this.HOTEN_ND = HOTEN_ND;
+        this.EMAIL = EMAIL;
+        this.MATKHAU = MATKHAU;
+        this.SDT_ND = SDT_ND;
+        this.NGAYSINH = NGAYSINH;
+        this.GIOITINH = GIOITINH;
+        this.CHUCVU = CHUCVU;
+        this.NGAYDANGKY = NGAYDANGKY;
+        this.ANHDAIDIEN = ANHDAIDIEN;
+    }
+}
+
+class MAGIAMGIA{
+    constructor(MA_MGG, MA_GIAMGIA, PHANTRAM, NGAYBATDAU, NGAYKETTHUC, DIEU_KIEN){
+        this.MA_MGG = MA_MGG;
+        this.MA_GIAMGIA = MA_GIAMGIA;
+        this.PHANTRAM = PHANTRAM;
+        this.NGAYBATDAU = NGAYBATDAU;
+        this.NGAYKETTHUC = NGAYKETTHUC;
+        this.DIEU_KIEN = DIEU_KIEN;
+    }
+}

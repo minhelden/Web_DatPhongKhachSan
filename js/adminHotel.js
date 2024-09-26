@@ -1,28 +1,24 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     const localStorageToken = localStorage.getItem('localStorageToken');
-//     if (!localStorageToken) {
-//         window.location.href = "index.html";
-//         return; 
-//     }
-
-//     const decodedToken = localStorageToken ? JSON.parse(atob(localStorageToken.split('.')[1])) : null;
-//     const userID = decodedToken && decodedToken.data && decodedToken.data.MA_ND;
-//     const userRole = decodedToken && decodedToken.data && decodedToken.data.CHUCVU;
-
-//     if (userRole !== "Quản lý") {
-//         window.location.href = "index.html";
-//         return;
-//     }
-
-//     if (userID) {
-//         getHotel();
-//     } else {
-//         console.log("UserID không tồn tại trong localStorage");
-//     }
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
-    getHotel();
+    const localStorageToken = localStorage.getItem('localStorageToken');
+    if (!localStorageToken) {
+        window.location.href = "/layout/loginAdmin.html";
+        return; 
+    }
+
+    const decodedToken = localStorageToken ? JSON.parse(atob(localStorageToken.split('.')[1])) : null;
+    const userID = decodedToken && decodedToken.data && decodedToken.data.MA_ND;
+    const userRole = decodedToken && decodedToken.data && decodedToken.data.CHUCVU;
+
+    if (userRole !== "Admin") {
+        window.location.href = "/layout/index.html";
+        return;
+    }
+
+    if (userID) {
+        getHotel();
+    } else {
+        console.log("UserID không tồn tại trong localStorage");
+    }
     const searchButton = document.getElementById('search-button');
     const searchInput = document.getElementById('search-input');
     

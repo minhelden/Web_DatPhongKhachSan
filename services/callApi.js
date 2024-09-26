@@ -33,3 +33,35 @@ async function apiSearchHotel(name) {
       throw error;
   }
 }
+
+async function apiGetUsers() {
+  try {
+    const localStorageToken = localStorage.getItem("localStorageToken");
+    const response = await axios({
+      method: "GET",
+      url: `${URL}/api/user/get-user-all`,
+      headers: {
+        token: localStorageToken,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching user data:", error);
+    throw error;
+  }
+}
+
+async function apiGetDiscount() {
+  return await axios({
+    method: "GET",
+    url: `${URL}/api/discount/get-discount`,
+  });
+}
+
+async function apiLoginAdmin(user) {
+  return await axios({
+    method: "POST",
+    url: `${URL}/api/user/login-admin`,
+    data: user
+  });
+}
