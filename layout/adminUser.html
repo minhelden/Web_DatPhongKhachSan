@@ -52,9 +52,12 @@
                     <h3 class="text-start">Quản lý người dùng</h3>
                 </th>
                 <th class="d-flex justify-content-end" style="margin-right: 30px;">
-                    <div class="search-bar"> <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Tìm kiếm người dùng"/>
-                    </div>
+                  <div class="search-bar">
+                    <form class="search d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <input type="search" placeholder="Tìm kiếm người dùng" name="search"/>
+                    </form>
+                  </div>
                 </th>
             </thead>
         </table>
@@ -71,10 +74,12 @@
                 <th class="d-flex justify-content-center">Ảnh đại diện</th>
                 <th></th>
             </thead>
-            <tbody id="tblDanhSachND"></tbody>
+            <tbody id="user"></tbody>
         </table>
     </main>
   </div>
+  <div id="pagination" class="d-flex justify-content-center mt-3"></div>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -94,8 +99,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
   integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="../js/class.js"></script>
-  <script src="../services/callApi.js"></script>
-  <script src="../js/adminHTQLND.js"></script>
+  <script src="/js/class.js"></script>
+  <script src="/services/callApi.js"></script>
+  <script src="/js/adminUser.js"></script>
 </body>
 </html>
