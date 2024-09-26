@@ -1,7 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    getCountry();
-    getProvince();
+    showSpinner(); // Hiển thị spinner khi bắt đầu tải dữ liệu
+    Promise.all([getCountry(), getProvince()]).then(() => {
+        hideSpinner(); // Ẩn spinner sau khi dữ liệu được tải
+    });
 });
+
+function showSpinner() {
+    getElement("#loading-spinner").classList.remove("hidden");
+}
+
+function hideSpinner() {
+    getElement("#loading-spinner").classList.add("hidden");
+}
 
 function getElement(selector) {
     return document.querySelector(selector);
@@ -47,7 +57,7 @@ function renderCountry(countrys) {
             ` 
                 <div class="col">
                     <div class="card text-white">
-                        <img src="/img/${duongDanHinh}" class="card-img" alt="...">
+                        <img src="/img/${duongDanHinh}" loading="lazy" class="card-img" alt="...">
                         <div class="card-img-overlay">
                             <h5 class="card-title mt-3 fw-bold">${country.TEN_QUOCGIA}</h5>
                             <p class="card-text"><small>16,763 accommodations</small></p>
@@ -68,7 +78,7 @@ function renderProvince(provinces) {
             ` 
                 <div class="col">
                     <div class="card text-white">
-                      <img src="/img/${duongDanHinh}" class="card-province object-fit-cover" alt="...">
+                      <img src="/img/${duongDanHinh}" loading="lazy" class="card-province object-fit-cover" alt="...">
                       <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
                         <h6 class="card-title">${province.TEN_TINHTHANH}</h6>
                         <p class="card-text"><small>${province.MA_QUOCGIA_QUOCGIum.TEN_QUOCGIA}</small></p>
