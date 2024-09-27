@@ -21,6 +21,20 @@ async function apiGetHotel() {
   });
 }
 
+async function apiGetRoomLocal(localID) {
+  return await axios({
+    method: "GET",
+    url: `${URL}/api/hotel/get-hotel-local/${localID}`,
+  });
+}
+
+async function apiGetRoomCountry(countryID) {
+  return await axios({
+    method: "GET",
+    url: `${URL}/api/hotel/get-hotel-country/${countryID}`,
+  });
+}
+
 async function apiSearchHotel(name) {
   try {
       const response = await axios({
