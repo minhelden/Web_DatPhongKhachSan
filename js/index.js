@@ -20,8 +20,8 @@ function getElement(selector) {
 async function getCountry() {    
     try {
         const response = await apiGetCountry();
-        const country = response.data; 
-        const countryObj = country.map((country) => new QUOCGIA(
+        const countrys = response.data; 
+        const countryObj = countrys.map((country) => new QUOCGIA(
             country.MA_QUOCGIA,
             country.TEN_QUOCGIA,
             country.HINHANH
@@ -56,13 +56,15 @@ function renderCountry(countrys) {
             result +
             ` 
                 <div class="col">
-                    <div class="card text-white">
+                    <a href="/layouts/room.html?countryID=${country.MA_QUOCGIA}" data-new-id="${country.MA_QUOCGIA}">
+                        <div class="card text-white">
                         <img src="/img/${duongDanHinh}" loading="lazy" class="card-img" alt="...">
                         <div class="card-img-overlay">
                             <h5 class="card-title mt-3 fw-bold">${country.TEN_QUOCGIA}</h5>
                             <p class="card-text"><small>16,763 accommodations</small></p>
                         </div>
-                    </div>               
+                    </div>         
+                    </a>      
                 </div>
           `
         );
@@ -77,13 +79,15 @@ function renderProvince(provinces) {
             result +
             ` 
                 <div class="col">
-                    <div class="card text-white">
-                      <img src="/img/${duongDanHinh}" loading="lazy" class="card-province object-fit-cover" alt="...">
-                      <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
-                        <h6 class="card-title">${province.TEN_TINHTHANH}</h6>
-                        <p class="card-text"><small>${province.MA_QUOCGIA_QUOCGIum.TEN_QUOCGIA}</small></p>
-                      </div>
-                    </div>
+                    <a href="/layouts/room.html?localID=${province.MA_TINHTHANH}" data-new-id="${province.MA_TINHTHANH}">
+                        <div class="card text-white">
+                            <img src="/img/${duongDanHinh}" loading="lazy" class="card-province object-fit-cover" alt="...">
+                            <div class="card-img-overlay d-flex justify-content-end align-items-lg-start flex-column">
+                                <h6 class="card-title">${province.TEN_TINHTHANH}</h6>
+                                <p class="card-text"><small>${province.MA_QUOCGIA_QUOCGIum.TEN_QUOCGIA}</small></p>
+                            </div>
+                        </div>
+                    </a>
                   </div>
           `
         );
