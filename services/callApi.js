@@ -101,6 +101,14 @@ async function apiLoginAdmin(user) {
   });
 }
 
+async function apiLoginUser(user) {
+  return await axios({
+    method: "POST",
+    url: `${URL}/api/user/login-user`,
+    data: user
+  });
+}
+
 async function apiGetPriceDiscount(roomID){
   return await axios({
     method: "GET",
@@ -114,3 +122,11 @@ async function apiGetRateSummary(roomID){
     url: `${URL}/api/rate/get-avg-rate/${roomID}`,
   });
 }
+
+async function apiGetDataRoom(roomID){
+  return await axios({
+    method: "GET",
+    url: `${URL}/api/room/get-data-room/${roomID}`,
+  });
+}
+

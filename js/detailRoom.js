@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         getRoomID(roomID);
         getRateID(roomID);
         getConvenient(roomID);
+        getDataRoom(roomID);
     }
 })
 
@@ -64,7 +65,27 @@ async function getConvenient(roomID){
     }
 }
 
-
+async function getDataRoom(roomID){
+    try {
+        const response = await apiGetDataRoom(roomID);
+        const rooms = response.data;
+        const roomObj = rooms.map((room) => new PHONG(
+            room.MA_PHONG,
+            room.TENPHONG,
+            room.MOTA,
+            room.GIATIEN,
+            room.HINHANH,
+            room.TRANGTHAIPHG,
+            room.MA_KS,
+            room.MA_KM,
+            room.MA_LOAIPHG
+        )) 
+        console.log(roomObj)
+        renderDataRoom(roomObj);
+    } catch (error) {
+        console.log("Lỗi từ máy chủ", error);
+    }
+}
 
 function renderRoomID(rooms){
     const html = rooms.reduce((result, room) =>{
@@ -101,8 +122,8 @@ function renderRoomID(rooms){
                                             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#roomAccordion">
                                                 <div class="accordion-body">
                                                     <p>Immerse yourself in luxury with our Deluxe Ocean View Room. Enjoy breathtaking views of the Pacific Ocean from your private balcony.</p>
-                                                    <p><strong>Price:</strong> $350 per night</p>
-                                                    <p><strong>Availability:</strong> <span class="badge bg-success">Available</span></p>
+                                                    <p><strong>Giá:</strong> $350 per night</p>
+                                                    <p><strong>Trạng thái:</strong> <span class="badge bg-success">Available</span></p>
                                                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Đặt ngay</button>
                                                 </div>
                                             </div>
@@ -186,6 +207,32 @@ function renderRateID(rates) {
         );
     }, "");
     document.getElementById("rates").innerHTML = html;
+}
+
+function renderDataRoom(rooms){
+    const html = rooms.reduce((result, room) =>{
+        return (
+            result +
+            `
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ${room.TENPHONG}
+                        </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#roomAccordion">
+                        <div class="accordion-body">
+                            <p>${room.MOTA}</p>
+                            <p><strong>Giá:</strong> ${room.GIATIEN} night</p>
+                            <p><strong>Trạng thái:</strong> <span class="badge bg-success">${room.TRANGTHAIPHG}</span></p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Đặt ngay</button>
+                        </div>
+                    </div>
+                </div>
+            `
+        );
+    }, "");
+    document.getElementById("roomAccordion").innerHTML = html;
 }
 
 function renderConvenient(convenients) {
