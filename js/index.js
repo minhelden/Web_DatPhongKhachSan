@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    showSpinner(); // Hiển thị spinner khi bắt đầu tải dữ liệu
+    showSpinner(); 
     Promise.all([getCountry(), getProvince()]).then(() => {
-        hideSpinner(); // Ẩn spinner sau khi dữ liệu được tải
+        hideSpinner();x
     });
 });
 
