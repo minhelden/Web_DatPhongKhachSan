@@ -1,0 +1,36 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 400px;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#reviewsList .card {
+    transition: all 0.3s ease;
+}
+
+#reviewsList .card:hover {
+    background-color: #f1f3f5;
+}
+
+.review-list .card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
+

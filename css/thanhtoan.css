@@ -1,119 +1,153 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
+  background-color: #f4f7fa;
+  font-family: 'Arial', sans-serif;
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.left-section, .right-section {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 48%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
 }
 
 .header {
-  background-color: #e0f7fa;
-  padding: 10px;
-  border-radius: 5px;
+  background-color: #1e6bb8;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
-.header p {
-  color: #00796b;
-  font-weight: bold;
-}
-
-.header span {
-  color: #d32f2f;
-  font-weight: bold;
-}
-
-h2 {
-  color: #333333;
-  margin-bottom: 20px;
-}
-
-.payment-method {
-  margin-bottom: 20px;
-}
-
-.payment-method input[type="radio"] {
-  margin-right: 10px;
-}
-
-.payment-method label {
-  font-weight: bold;
-}
-
-.discount-label {
-  background-color: #ffcc80;
-  color: #e65100;
-  padding: 3px 5px;
-  font-size: 12px;
-  border-radius: 3px;
+.header .timer {
+  color: rgb(62, 247, 6);
+  padding: 3px 8px;
+  border-radius: 4px;
   margin-left: 10px;
 }
 
-.bank-details {
-  margin-left: 20px;
-  padding: 10px;
-  border-left: 3px solid #0288d1;
-  background-color: #e1f5fe;
-  border-radius: 5px;
+.header .timer-icon {
+  color: #fff;
+  margin-right: 8px;
+  vertical-align: middle; /* Căn giữa biểu tượng với văn bản */
 }
 
-.bank-option {
-  margin: 10px 0;
-}
-
-#payButton {
-  width: 100%;
-  padding: 15px;
-  background-color: #ff4500;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+.payment-option {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: #fff;
   cursor: pointer;
-  margin-top: 20px;
 }
 
-#payButton:hover {
-  background-color: #ff5722;
+.payment-option:hover, .payment-option.active {
+  border-color: #1e6bb8;
+  background-color: #f4f9ff;
 }
 
-.right-section {
-  background-color: #f9f9f9;
+.payment-option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+}
+
+.summary-box {
+  background-color: #e9f0f8;
   padding: 20px;
   border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
-.right-section p {
-  margin: 10px 0;
-  font-size: 16px;
-  color: #444444;
+.summary-box h5 {
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
-.right-section p strong {
-  font-size: 18px;
+.special-request {
+  background-color: #e9f0f8; /* Màu nền nhạt */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 15px; /* Khoảng cách giữa các phần tử */
 }
 
-.right-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
+.special-request p {
+  margin: 0;
+  font-size: 1rem; /* Kích thước chữ phù hợp */
 }
 
-.right-section ul li {
-  font-size: 14px;
-  color: #666666;
-  margin-bottom: 5px;
+.contact-details {
+  background-color: #e9f0f8;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 15px;
+}
+
+.contact-details h5 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-details p {
+  margin: 0;
+  color: #333;
+}
+
+.total-price {
+  font-size: 1.6rem;
+  color: #0e2a77;
+  font-weight: bold;
+}
+
+.pay-button {
+  background-color: #0e2a77;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  border: none;
+  width: 100%;
+}
+
+.pay-button:hover {
+  background-color: #0e2a77;
+  }
+
+.discount-code {
+  margin: 20px 0;
+}
+
+.discount-code .btn-link {
+  color: #1e6bb8;
+  text-decoration: none;
+}
+
+.discount-code .btn-link:hover {
+  text-decoration: underline;
+}
+
+.disabled-option {
+  color: #999;
+  background-color: #f4f4f4;
+}
+
+.disabled-option input {
+  cursor: not-allowed;
+}
+
+.holiday-message {
+  background-color: #fff4e6; /* Màu nền nhạt để nổi bật */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #f5c6a5;
+  text-align: center;
+  font-style: italic;
+  color: #ca741e; /* Màu chữ nổi bật */
+}
+
+.holiday-message p {
+  margin: 0;
+  font-size: 1.1rem;
 }
