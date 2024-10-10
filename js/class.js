@@ -75,11 +75,11 @@ class KHACHSAN_TIENNGHI{
 }
 
 class PHONG{
-    constructor(MA_PHONG, TENPHONG, MOTA, GIA_TIEN, HINHANH, TRANGTHAIPHG, MA_KS, MALOAIPHG, MA_KM){
+    constructor(MA_PHONG, TENPHONG, MOTA, GIATIEN, HINHANH, TRANGTHAIPHG, MA_KS, MALOAIPHG, MA_KM){
         this.MA_PHONG = MA_PHONG;
         this.TENPHONG = TENPHONG;
         this.MOTA = MOTA;
-        this.GIA_TIEN = GIA_TIEN;
+        this.GIATIEN = GIATIEN;
         this.HINHANH = HINHANH;
         this.TRANGTHAIPHG = TRANGTHAIPHG;
         this.MA_KS = MA_KS;

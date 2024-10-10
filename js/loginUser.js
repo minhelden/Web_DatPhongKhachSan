@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 async function SignIn() {
-    
     const taiKhoan = getElement("#EmailOrPhone").value;
     const matKhau = getElement("#Password").value;
     function isEmail(value) {
@@ -21,7 +20,7 @@ async function SignIn() {
   
     const isTaiKhoanEmail = isEmail(taiKhoan);
     try {
-      const response = await apiLoginAdmin({
+      const response = await apiLoginUser({
         SDT_ND: isTaiKhoanEmail ? null : taiKhoan,
         EMAIL: isTaiKhoanEmail ? taiKhoan : null,
         MATKHAU: matKhau,
@@ -31,7 +30,7 @@ async function SignIn() {
         const token = response.data;
         localStorage.setItem("localStorageToken", token);
           Swal.fire('Đăng nhập thành công', '', 'success').then(() => {
-          window.location.href = "../layouts/adminHotel.html";
+          window.location.href = "../layouts/index.html";
         });
       } else if (response.status === 400) {
         Swal.fire('Tài khoản hoặc mật khẩu không đúng', '', 'error');
@@ -43,5 +42,3 @@ async function SignIn() {
       console.error(error);
     }
 }
-
-
