@@ -35,6 +35,27 @@ async function apiGetRoomCountry(countryID) {
   });
 }
 
+async function apiGetRoomID(roomID) {
+  return await axios({
+    method: "GET",
+    url: `${URL}/api/hotel/get-hotel-id/${roomID}`,
+  });
+}
+
+async function apiGetRateID(roomID) {
+  return await axios({
+    method: "GET",
+    url: `${URL}/api/rate/get-rate-id/${roomID}`,
+  });
+}
+
+async function apiGetConvenientID(roomID) {
+  return await axios({
+    method: "GET",
+    url: `${URL}/api/room/get-convenient/${roomID}`,
+  });
+}
+
 async function apiSearchHotel(name) {
   try {
       const response = await axios({
@@ -77,5 +98,19 @@ async function apiLoginAdmin(user) {
     method: "POST",
     url: `${URL}/api/user/login-admin`,
     data: user
+  });
+}
+
+async function apiGetPriceDiscount(roomID){
+  return await axios({
+    method: "GET",
+    url: `${URL}/api/room/get-price-discount/${roomID}`,
+  });
+}
+
+async function apiGetRateSummary(roomID){
+  return await axios({
+    method: "GET",
+    url: `${URL}/api/rate/get-avg-rate/${roomID}`,
   });
 }

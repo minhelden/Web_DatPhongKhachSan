@@ -1,0 +1,60 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.hotel-header {
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hotel-header img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+}
+
+.hotel-header .position-absolute {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+.star-rating {
+    font-size: 1.5rem;
+    color: #ffc107;
+    cursor: pointer;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hotel-header {
+        height: 40vh;
+    }
+
+    .hotel-header .position-absolute {
+        width: 90%;
+    }
+}
+
