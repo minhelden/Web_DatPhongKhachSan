@@ -7,10 +7,10 @@ async function apiGetCountry() {
     });
 }
 
-async function apiGetProvince() {
+async function apiGetProvince(countryID) {
     return await axios({
       method: "GET",
-      url: `${URL}/api/local/get-province`,
+      url: `${URL}/api/local/get-province/${countryID}`,
     });
 }
 
