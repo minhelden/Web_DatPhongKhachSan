@@ -129,4 +129,21 @@ async function apiGetDataRoom(roomID){
     url: `${URL}/api/room/get-data-room/${roomID}`,
   });
 }
-
+//api create danh gia
+async function apiCreateReview(reviewData) {
+  try {
+    const localStorageToken = localStorage.getItem("localStorageToken");
+    const response = await axios({
+      method: "POST",
+      url: `${URL}/api/reviews/create-review`,
+      data: reviewData,
+      headers: {
+        token: localStorageToken,
+      },
+    });
+    return response.data; // Trả về dữ liệu phản hồi từ server
+  } catch (error) {
+    console.error("Lỗi khi tạo đánh giá:", error);
+    throw error; // Ném lỗi để xử lý ở nơi khác nếu cần
+  }
+}

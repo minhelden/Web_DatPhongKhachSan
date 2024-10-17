@@ -87,8 +87,8 @@ async function getDataRoom(roomID){
     }
 }
 
-function renderRoomID(rooms){
-    const html = rooms.reduce((result, room) =>{
+function renderRoomID(rooms) {
+    const html = rooms.reduce((result, room) => {
         const duongDanHinh = room.HINHANH;
         return (
             result +
@@ -113,49 +113,20 @@ function renderRoomID(rooms){
                                 <section class="room-types mb-5">
                                     <h2 class="mb-4">Đa dạng các loại phòng</h2>
                                     <div class="accordion" id="roomAccordion">
-                                        <div class="accordion-item">
-                                            <h3 class="accordion-header">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    Deluxe Ocean View Room
-                                                </button>
-                                            </h3>
-                                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#roomAccordion">
-                                                <div class="accordion-body">
-                                                    <p>Immerse yourself in luxury with our Deluxe Ocean View Room. Enjoy breathtaking views of the Pacific Ocean from your private balcony.</p>
-                                                    <p><strong>Giá:</strong> $350 per night</p>
-                                                    <p><strong>Trạng thái:</strong> <span class="badge bg-success">Available</span></p>
-                                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Đặt ngay</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h3 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Executive Suite
-                                                </button>
-                                            </h3>
-                                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#roomAccordion">
-                                                <div class="accordion-body">
-                                                    <p>Experience ultimate luxury in our spacious Executive Suite, featuring a separate living area and panoramic ocean views.</p>
-                                                    <p><strong>Price:</strong> $550 per night</p>
-                                                    <p><strong>Availability:</strong> <span class="badge bg-warning text-dark">Limited</span></p>
-                                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Đặt ngay</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <!-- Các phòng có thể được lặp lại từ data -->
                                     </div>
                                 </section>
                             </div>
-            
                             <div class="col-lg-4">
                                 <section class="reviews mb-5">
                                     <h2 class="mb-4">Đánh giá của khách hàng</h2>
-                                    <div id="rates"></div>                               
+                                    <div id="rates"></div>
                                 </section>
                                 <section class="rating">
                                     <h2>Đánh giá của bạn</h2>
-                                    <form>
+                                    <form id="reviewForm">
                                         <div class="mb-3">
+                                            <label>Chọn số sao:</label>
                                             <div id="ratingStars" class="star-rating">
                                                 <i class="far fa-star" data-rating="1"></i>
                                                 <i class="far fa-star" data-rating="2"></i>
@@ -165,7 +136,8 @@ function renderRoomID(rooms){
                                             </div>
                                         </div>
                                         <div class="mb-3">
-                                            <textarea class="form-control" id="reviewText" rows="3" required></textarea>
+                                            <label for="reviewText">Bình luận:</label>
+                                            <textarea class="form-control" id="reviewText" rows="3" placeholder="Nhập bình luận của bạn..." required></textarea>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Gửi đánh giá</button>
                                     </form>
@@ -177,8 +149,78 @@ function renderRoomID(rooms){
             `
         );
     }, "");
+
     document.getElementById("detailsRoom").innerHTML = html;
+
+    // Xử lý sự kiện cho đánh giá
+    const stars = document.querySelectorAll('#ratingStars i');
+    let selectedRating = 0;
+
+    stars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+            selectedRating = index + 1;
+            stars.forEach((s, i) => {
+                s.classList.toggle('fas', i < selectedRating); // Thêm class fas cho các sao đã chọn
+                s.classList.toggle('far', i >= selectedRating); // Thay đổi class cho các sao chưa chọn
+            });
+            document.getElementById('ratingStars').setAttribute('data-selected', selectedRating);
+        });
+    });
+
+    document.getElementById('reviewForm').addEventListener('submit', async function (event) {
+        event.preventDefault(); // Chặn hành động submit mặc định
+        const rating = document.getElementById('ratingStars').getAttribute('data-selected');
+        const comment = document.getElementById('reviewText').value;
+        const urlParams = new URLSearchParams(window.location.search);
+        const roomID = urlParams.get('roomID');
+
+        try {
+            const review = {
+                MA_KS: roomID,
+                SO_SAO: rating,
+                BINH_LUAN: comment
+            };
+            await apiCreateReview(review);
+
+            // Hiển thị thông báo thành công với SweetAlert
+            Swal.fire({
+                title: 'Thành công!',
+                text: 'Bạn đã đánh giá thành công!',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+
+            // Thêm đánh giá mới vào danh sách hiển thị
+            const newReviewHTML = `
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Nguyen Van Long</h5>
+                    <div class="star-rating mb-2">
+                        ${[...Array(5)].map((_, i) => i < rating ? '<i class="fas fa-star" style="color: #ffc107;"></i>' : '<i class="far fa-star" style="color: #ffc107;"></i>').join('')}
+                    </div>
+                    <p class="card-text">${comment}</p>
+                    <p class="text-muted">— ${new Date().toISOString().split('T')[0]}</p>
+                </div>
+            </div>
+            `;
+            document.getElementById('rates').insertAdjacentHTML('beforeend', newReviewHTML);
+
+
+            // Xóa nội dung form sau khi thêm
+            document.getElementById('reviewText').value = '';
+            selectedRating = 0;
+            stars.forEach(star => {
+                star.classList.remove('fas');
+                star.classList.add('far');
+            });
+
+        } catch (error) {
+            console.log(error);
+        }
+    });
 }
+
+
 
 function renderRateID(rates) {
     const html = rates.reduce((result, rate) => {
