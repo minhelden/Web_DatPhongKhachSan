@@ -6,7 +6,11 @@
 
 :root {
     --light: #f6f6f9;
+<<<<<<< HEAD
     --primary: #009970;
+=======
+    --primary: #1976D2;
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
     --grey: #eee;
     --success: #300E3C;
 }
@@ -381,6 +385,17 @@ main .new-users .user-list .user img{
     }
 }
 
+<<<<<<< HEAD
+=======
+#all_gender, #delete_user{
+    width: 110px;
+    margin: 0px 20px 0px 0px;
+    border: 1px solid #aaa;
+    padding: 10px 0px 0px 10px;
+    border-radius: 5px;
+}
+
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 select{
     width: 125px;
     background: none;
@@ -389,6 +404,7 @@ select{
     border-radius: 5px;
     font-size: 15px;
     margin: 10px 15px 5px 0px;
+<<<<<<< HEAD
 }
 
 .spinner-overlay {
@@ -421,3 +437,6 @@ select{
 .hidden {
     display: none;
 }
+=======
+}
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf

@@ -1,11 +1,21 @@
+<<<<<<< HEAD
+=======
+/* Định nghĩa kiểu dáng cho body */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     
 }
 
+=======
+}
+
+/* Container chính */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .container {
     width: 95%;
     max-width: 1200px;
@@ -16,19 +26,31 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+<<<<<<< HEAD
 
 
+=======
+/* Tiêu đề */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 h2, h3, h4 {
     color: #333;
     margin-bottom: 15px;
 }
 
+<<<<<<< HEAD
+=======
+/* Đoạn văn và nhãn */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 p, label {
     color: #666;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
+=======
+/* Thông tin thành viên */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .member-info, .content-section {
     margin-bottom: 20px;
 }
@@ -42,11 +64,19 @@ p, label {
     border-radius: 8px;
 }
 
+<<<<<<< HEAD
+=======
+/* Thông tin người dùng */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .user-info {
     display: flex;
     align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+/* Avatar người dùng */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .user-avatar {
     width: 50px;
     height: 50px;
@@ -60,11 +90,19 @@ p, label {
     margin-right: 15px;
 }
 
+<<<<<<< HEAD
+=======
+/* Tiện ích */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .benefits {
     display: flex;
     gap: 15px;
 }
 
+<<<<<<< HEAD
+=======
+/* Mục tiện ích */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .benefit-item {
     display: flex;
     flex-direction: column;
@@ -76,16 +114,24 @@ p, label {
     border: 1px solid #e1e1e1;
 }
 
+<<<<<<< HEAD
 .benefit-item img {
     width: 30px;
     margin-bottom: 5px;
 }
 
+=======
+/* Nội dung chính */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .content-section {
     display: flex;
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
+=======
+/* Cột bên trái và bên phải */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .left-column {
     width: 65%;
 }
@@ -94,6 +140,10 @@ p, label {
     width: 30%;
 }
 
+<<<<<<< HEAD
+=======
+/* Tóm tắt phòng và chính sách */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .room-summary, .policy {
     background-color: #fff;
     padding: 15px;
@@ -102,17 +152,29 @@ p, label {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
+<<<<<<< HEAD
+=======
+/* Hình ảnh trong tóm tắt phòng */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .room-summary img {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
+=======
+/* Nhãn */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 label {
     display: block;
     margin-bottom: 5px;
 }
 
+<<<<<<< HEAD
+=======
+/* Input và select */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 input[type="text"], input[type="email"], select {
     width: 100%;
     padding: 8px;
@@ -121,16 +183,24 @@ input[type="text"], input[type="email"], select {
     border-radius: 4px;
 }
 
+<<<<<<< HEAD
+=======
+/* Nhóm số điện thoại */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .phone-group {
     display: flex;
     gap: 10px;
 }
 
+<<<<<<< HEAD
 .additional-services input[type="checkbox"] {
     margin-right: 10px;
 }
 
 /* Phần Tiện ích bổ sung cho kỳ nghỉ */
+=======
+/* Tiện ích bổ sung cho kỳ nghỉ */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .additional-benefits {
     background-color: #fff;
     padding: 15px;
@@ -139,12 +209,17 @@ input[type="text"], input[type="email"], select {
     border: 1px solid #e1e1e1;
 }
 
+<<<<<<< HEAD
+=======
+/* Danh sách trong tiện ích bổ sung */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .additional-benefits ul {
     list-style-type: disc;
     margin-left: 20px;
     color: #666;
 }
 
+<<<<<<< HEAD
 .additional-benefits .price {
     font-weight: bold;
     color: #0e2a77;
@@ -152,6 +227,16 @@ input[type="text"], input[type="email"], select {
 }
 
 /* Phần Chi tiết giá */
+=======
+/* Giá trong tiện ích bổ sung */
+.additional-benefits .price {
+    font-weight: bold;
+    color: #009970;
+    margin-top: 10px;
+}
+
+/* Chi tiết giá */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .price-details {
     background-color: #fff;
     padding: 15px;
@@ -160,11 +245,19 @@ input[type="text"], input[type="email"], select {
     border: 1px solid #e1e1e1;
 }
 
+<<<<<<< HEAD
+=======
+/* Tiêu đề chi tiết giá */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .price-details h3 {
     margin-bottom: 15px;
     color: #333;
 }
 
+<<<<<<< HEAD
+=======
+/* Hàng giá */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .price-row {
     display: flex;
     justify-content: space-between;
@@ -172,6 +265,10 @@ input[type="text"], input[type="email"], select {
     font-size: 14px;
 }
 
+<<<<<<< HEAD
+=======
+/* Tổng giá */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .total-price {
     display: flex;
     justify-content: space-between;
@@ -180,6 +277,7 @@ input[type="text"], input[type="email"], select {
     margin-top: 15px;
     padding-top: 10px;
     border-top: 1px solid #ddd;
+<<<<<<< HEAD
     color: #0e2a77;
 }
 
@@ -187,6 +285,16 @@ input[type="text"], input[type="email"], select {
     width: 100%;
     padding: 10px;
     background-color: #0e2a77;
+=======
+    color: #009970;
+}
+
+/* Nút tiếp tục */
+.continue-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #009970;
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
     color: white;
     border: none;
     border-radius: 5px;
@@ -195,9 +303,17 @@ input[type="text"], input[type="email"], select {
     margin-top: 20px;
 }
 
+<<<<<<< HEAD
 .continue-btn:hover {
     background-color: #e65c50;
 }
+=======
+/* Hiệu ứng hover cho nút tiếp tục */
+.continue-btn:hover {
+    background-color: #009970;
+}
+
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 /* Chính sách lưu trú */
 .stay-policy {
     background-color: #fff;
@@ -207,11 +323,19 @@ input[type="text"], input[type="email"], select {
     border: 1px solid #e1e1e1;
 }
 
+<<<<<<< HEAD
+=======
+/* Tiêu đề chính sách lưu trú */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .stay-policy h3 {
     margin-bottom: 15px;
     color: #333;
 }
 
+<<<<<<< HEAD
+=======
+/* Mục chính sách */
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
 .policy-item {
     margin-bottom: 20px;
 }
@@ -228,14 +352,26 @@ input[type="text"], input[type="email"], select {
     margin: 0;
 }
 
+<<<<<<< HEAD
 .view-details {
     display: block;
     margin-top: 10px;
     color: #1a73e8;
+=======
+/* Liên kết chi tiết */
+.view-details {
+    display: block;
+    margin-top: 10px;
+    color: #009970;
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf
     text-decoration: none;
     font-size: 13px;
 }
 
 .view-details:hover {
     text-decoration: underline;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 988b9d2166062bdd7a9ee0c16a5ae70add885bdf

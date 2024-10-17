@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Thiết lập mã hóa ký tự và thẻ meta giúp tương thích với nhiều loại thiết bị -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt phòng của bạn</title>
+    
+    <!-- Liên kết với thư viện Bootstrap để sử dụng các thành phần giao diện có sẵn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    
+    <!-- Liên kết file CSS tùy chỉnh riêng của trang -->
+    <link rel="stylesheet" href="../css/DatPhong.css">
+
+    <!-- Thêm icon cho tab trình duyệt -->
+    <link rel="icon" href="../img/logo.png"/>
+</head>
+
+<body>
+    <!-- Header và thanh điều hướng (Navbar) của trang -->
+    <header>
+        <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <!-- Logo của trang web -->
+                <a class="navbar-brand me-auto" href="index.html">
+                    <img src="../img/logo.png" alt="Logo Bazoka" width="80" height="70">Bazoka
+                </a>
+
+                <!-- Menu xuất hiện khi kích thước nhỏ -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <img src="../img/logo.png" alt="Logo nhỏ" width="80" height="60">Bazoka
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Các mục trong menu -->
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 active" aria-current="page" href="#">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#">Liên hệ dịch vụ khách hàng</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link mx-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Hỗ trợ
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Trợ giúp</a></li>
+                                    <li><a class="dropdown-item" href="#">Liên hệ chúng tôi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Nút đăng nhập và đăng ký -->
+                <a class="login-button me-2" href="#">Đăng nhập</a>
+                <a class="register-button" href="#">Đăng ký</a>
+
+                <!-- Nút chuyển đổi thanh điều hướng cho các màn hình nhỏ -->
+                <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>    
+    </header>
+
+    <!-- Phần nội dung chính của trang -->
+    <div class="container my-4">
+        <h2>Đặt phòng của bạn</h2>
+        <p>Hãy đảm bảo tất cả thông tin chi tiết trên trang này đã chính xác trước khi tiến hành thanh toán.</p>
+
+        <!-- Thông tin thành viên -->
+        <div class="row mb-4">
+            <div class="col-md-8 d-flex align-items-center">
+                <div class="user-avatar me-3">
+                    <img src="../img/earth-day.png" alt="Avatar của người dùng" class="img-fluid rounded-circle">
+                </div>
+                <div>
+                    <p>Thái Hiếu Minh thân mến! Hãy tận hưởng những đặc quyền này với tư cách là khách hàng của Bazoka.</p>
+                </div>
+            </div>
+
+            <!-- Các tiện ích cho thành viên -->
+            <div class="col-md-4 d-flex gap-3">
+                <div class="benefit-item text-center p-3 border rounded">
+                    <img src="https://img.icons8.com/ios/50/000000/customer-support.png" alt="Dịch vụ khách hàng 24/7" class="img-fluid mb-2">
+                    <p>Dịch vụ khách hàng 24/7</p>
+                    <span>Hãy liên hệ chúng tôi bất cứ lúc nào bạn cần.</span>
+                </div>
+                <div class="benefit-item text-center p-3 border rounded">
+                    <img src="https://img.icons8.com/ios/50/000000/coins.png" alt="Tích xu" class="img-fluid mb-2">
+                    <p>Tích xu</p>
+                    <span>Tích được lượng xu nhiều hơn.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phần hiển thị chi tiết phòng và chính sách khách sạn -->
+        <div class="row">
+            <!-- Sidebar bên trái -->
+            <div class="col-md-4">
+                <div class="room-summary mb-4 p-3 border rounded">
+                    <h4>Grand K Hotel Suites Hanoi</h4>
+                    <img src="../img/image_hotel.jpg" alt="Hình ảnh khách sạn">
+                    <p><b>Nhận phòng:</b> Thứ 2, 14 Tháng 2 2024, 14:00</p>
+                    <p><b>Trả phòng:</b> Thứ 5, 17 Tháng 2 2024, 12:00</p>
+                    <p><b>Phòng:</b> 1x Deluxe</p>
+                    <p><b>Tổng giá:</b> 2,445,135 VND</p>
+                </div>
+
+                <!-- Chính sách hủy và lưu trú -->
+                <div class="policy mb-4 p-3 border rounded">
+                    <h4>Chính sách hủy và đổi lịch</h4>
+                    <p>Miễn phí hủy phòng trước 29 Tháng 9 2024</p>
+                </div>
+                <div class="stay-policy mb-4 p-3 border rounded">
+                    <h4>Chính sách lưu trú</h4>
+                    <p>Tiền cọc 1,000,000 VND khi nhận phòng. Chấp nhận tiền mặt, thẻ ghi nợ, hoặc thẻ tín dụng.</p>
+                    <p>Độ tuổi tối thiểu nhận phòng: 18 tuổi.</p>
+                    <a href="#" class="view-details">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <!-- Nội dung bên phải: Thông tin đặt phòng -->
+            <div class="col-md-8">
+                <!-- Form nhập thông tin liên hệ -->
+                <div class="contact-info mb-4 p-3 border rounded">
+                    <h3>Thông tin liên hệ</h3>
+                    <form>
+                        <label for="name">Họ tên</label>
+                        <input type="text" id="name" placeholder="Nhập họ tên của bạn">
+
+                        <label for="id">Hộ chiếu/CMND/CCCD</label>
+                        <input type="text" id="id" placeholder="Số hộ chiếu hoặc CMND/CCCD">
+
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Email của bạn">
+
+                        <label for="phone">Số điện thoại</label>
+                        <div class="phone-group">
+                            <select>
+                                <option value="+84">+84</option>
+                                <option value="+1">+1</option>
+                            </select>
+                            <input type="text" placeholder="Số điện thoại">
+                        </div>
+
+                        <!-- Tùy chọn khách lưu trú -->
+                        <label>
+                            <input type="radio" name="stay-option" id="stay-self" checked> Tôi là khách lưu trú
+                        </label>
+                        <label>
+                            <input type="radio" name="stay-option" id="stay-other"> Tôi đang đặt cho người khác
+                        </label>
+
+                        <!-- Hiển thị ô nhập tên khi đặt cho người khác -->
+                        <div id="guest-name-container" style="display: none;">
+                            <label for="guest-name">Tên đầy đủ của khách</label>
+                            <input type="text" id="guest-name" placeholder="Nguyen Van Teo">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Yêu cầu phòng -->
+                <div class="room-preferences mb-4 p-3 border rounded">
+                    <h3>Bạn yêu cầu nào không?</h3>
+                    <form>
+                        <label><input type="checkbox"> Phòng không hút thuốc</label>
+                        <label><input type="checkbox"> Phòng liền thông</label>
+                        <label><input type="checkbox"> Tầng lầu</label>
+                        <label><input type="checkbox"> Loại giường</label>
+                        <label><input type="checkbox"> Giờ nhận phòng</label>
+                        <label>
+                            <input type="checkbox" id="other-checkbox"> Khác
+                        </label>
+                    
+                        <!-- Textbox hiện ra khi chọn "Khác" -->
+                        <div id="other-text-container" style="display: none; margin-top: 10px;">
+                            <input type="text" id="other-text" placeholder="Nhập yêu cầu khác">
+                        </div>
+                    </form>                    
+                </div>
+
+                <!-- Tiện ích bổ sung -->
+                <div class="additional-services mb-4 p-3 border rounded">
+                    <h3>Tiện ích bổ sung cho kỳ nghỉ của bạn</h3>
+                    <label><input type="checkbox" > Bảo hiểm Du lịch Chubb - Hotel Protect</label>
+                    <p>Bảo vệ kỳ nghỉ của bạn với Quỹ khẩn cấp rủi ro hủy, mất, hoặc phá hủy đặt phòng khách sạn, và hơn thế nữa.</p>
+                </div>
+
+                <!-- Tiện ích bổ sung cho kỳ nghỉ -->
+                <div class="additional-benefits mb-4 p-3 border rounded">
+                    <h3>Tiện ích bổ sung cho kỳ nghỉ của bạn</h3>
+                    <label><input type="checkbox" > Bảo hiểm Du lịch Chubb - Hotel Protect</label>
+                    <p>Bảo vệ kỳ nghỉ của bạn với Quỹ khách khẩn rủi ro hủy, mất, đặt phòng khách sạn, và hơn thế nữa.</p>
+                    <ul>
+                        <li>Bảo hiểm lên đến tối đa VND 850,000/phòng/đêm cho Quyền lợi Hủy hoặc Gián đoạn Đặt phòng khách sạn.</li>
+                        <li>Bảo hiểm lên đến VND 210,000,000 cho Quyền lợi Tai nạn cá nhân.</li>
+                        <li>Bảo hiểm lên đến VND 3,000,000 cho Quyền lợi Mất hoặc hư hại hành lý, quần áo và vật dụng cá nhân.</li>
+                    </ul>
+                    <div class="price">VND 61,128</div>
+                </div>
+
+                <!-- Chi tiết giá -->
+                <div class="price-details mb-4 p-3 border rounded">
+                    <h3>Chi tiết giá</h3>
+                    <div class="price-row">
+                        <span>Giá phòng</span>
+                        <span>2,156,204 VND</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Thuế và phí</span>
+                        <span>288,931 VND</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Bảo hiểm Du lịch Chubb - Hotel Protect</span>
+                        <span>61,128 VND</span>
+                    </div>
+                    <div class="total-price">
+                        <span>Tổng giá</span>
+                        <span>2,506,263 VND</span>
+                    </div>
+                        <!-- Nút tiếp tục thanh toán -->
+                    <button id="btnDatPhong" class="continue-btn">Tiếp tục thanh toán</button>
+                    <!-- Thông báo sau khi đặt phòng thành công -->
+                    <div id="thongBaoDatPhong" class="alert alert-success" style="display: none; margin-top: 20px;">
+                        Đặt phòng thành công! Cảm ơn bạn đã đặt phòng tại khách sạn của chúng tôi.
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </div>
+    
+    <script>
+        // Đợi cho tài liệu HTML được tải xong
+        document.addEventListener('DOMContentLoaded', function() {
+            const staySelf = document.getElementById('stay-self'); // Lấy radio button "Tôi là khách lưu trú"
+            const stayOther = document.getElementById('stay-other'); // Lấy radio button "Tôi đang đặt cho người khác"
+            const guestNameContainer = document.getElementById('guest-name-container'); // Container nhập tên khách
+    
+            // Hàm để hiển thị hoặc ẩn trường nhập tên khách
+            function toggleGuestName() {
+                if (stayOther.checked) {
+                    guestNameContainer.style.display = 'block';  // Hiển thị khi chọn "Tôi đang đặt cho người khác"
+                } else {
+                    guestNameContainer.style.display = 'none';   // Ẩn khi chọn "Tôi là khách lưu trú"
+                }
+            }
+    
+            // Gắn sự kiện 'click' cho các radio buttons
+            staySelf.addEventListener('click', toggleGuestName);
+            stayOther.addEventListener('click', toggleGuestName);
+        });
+    
+        // Đợi tài liệu HTML được tải xong
+        document.addEventListener('DOMContentLoaded', function() {
+            const otherCheckbox = document.getElementById('other-checkbox'); // Lấy checkbox "Khác"
+            const otherTextContainer = document.getElementById('other-text-container'); // Container nhập thông tin khác
+    
+            // Hàm hiển thị hoặc ẩn textbox dựa trên checkbox "Khác"
+            otherCheckbox.addEventListener('change', function() {
+                if (otherCheckbox.checked) {
+                    otherTextContainer.style.display = 'block';  // Hiển thị khi được chọn
+                } else {
+                    otherTextContainer.style.display = 'none';   // Ẩn khi không được chọn
+                }
+            });
+        });
+    
+        // Hàm theo dõi sự kiện chọn sản phẩm
+        function selectItemTrackEvent() {
+            document.querySelectorAll('.plp-product').forEach((productCard) => {
+                productCard.addEventListener('click', trackEvent); // Gắn sự kiện click cho mỗi thẻ sản phẩm
+            });
+    
+            function trackEvent(e) {
+                let product = e.srcElement.closest('.plp-product'); // Lấy sản phẩm gần nhất khi click
+    
+                dataLayer.push({
+                    ecommerce: null // Xóa dữ liệu ecommerce trước đó
+                });
+                // Gửi sự kiện chọn sản phẩm
+                dataLayer.push({
+                    event: "select_item",
+                    ecommerce: {
+                        items: [
+                            {
+                                item_id: product.dataset.itemId, // ID sản phẩm
+                                item_name: product.dataset.name, // Tên sản phẩm
+                                currency: Shopify.currency.active, // Tiền tệ
+                                discount: parseFloat(product.dataset.discount), // Giảm giá
+                                percent_discount: product.dataset.percent, // Phần trăm giảm giá
+                                index: 0,
+                                item_brand: product.dataset.itemBrand, // Thương hiệu
+                                item_category: product.dataset.category, // Danh mục
+                                item_category2: product.dataset.category2, // Danh mục phụ
+                                item_category3: product.dataset.category3, // Danh mục phụ 2
+                                item_availability: product.dataset.available, // Tình trạng sản phẩm
+                                item_list_name: "plp", // Tên danh sách sản phẩm
+                                price: parseFloat(product.dataset.price), // Giá sản phẩm
+                                quantity: 1 // Số lượng
+                            }
+                        ]
+                    }
+                });
+            }
+        }
+    
+        // Theo dõi sự kiện chọn sản phẩm trong phần "Shop the Look"
+        function trackEventSTL(e) {
+            let product = e.srcElement.closest('.stl-product'); // Lấy sản phẩm gần nhất
+    
+            dataLayer.push({
+                ecommerce: null // Xóa dữ liệu ecommerce trước đó
+            });
+            // Gửi sự kiện chọn sản phẩm cho "Shop the Look"
+            dataLayer.push({
+                event: "select_item",
+                ecommerce: {
+                    items: [
+                        {
+                            item_id: product.dataset.id, // ID sản phẩm
+                            item_name: product.dataset.name, // Tên sản phẩm
+                            currency: Shopify.currency.active, // Tiền tệ
+                            discount: parseFloat(product.dataset.discount), // Giảm giá
+                            percent_discount: product.dataset.percent, // Phần trăm giảm giá
+                            index: 0,
+                            item_brand: product.dataset.itembrand, // Thương hiệu
+                            item_category: product.dataset.category, // Danh mục
+                            item_category2: product.dataset.category2, // Danh mục phụ
+                            item_category3: product.dataset.category3, // Danh mục phụ 2
+                            item_availability: product.dataset.available, // Tình trạng sản phẩm
+                            item_list_name: "shopLook" + (parseInt(document.querySelector(".shopthelook-wrp .slick-current.slick-active").dataset.slickIndex) + 1), // Tên danh sách sản phẩm
+                            price: parseFloat(product.dataset.price), // Giá sản phẩm
+                            quantity: 1 // Số lượng
+                        }
+                    ]
+                }
+            });
+        }
+    
+        // Hàm lấy danh sách sản phẩm trong "Shop the Look"
+        const getObjItemList = (stl) => {
+            let obj = [];
+            stl.querySelectorAll(".contaner-list-products .stl-product").forEach((product, index) => {
+                var prd = {
+                    'item_id': product.dataset.id, // ID sản phẩm
+                    'item_name': product.dataset.title, // Tên sản phẩm
+                    'currency': Shopify.currency.active, // Tiền tệ
+                    'discount': parseFloat(product.dataset.discount), // Giảm giá
+                    'percent_discount': product.dataset.percent, // Phần trăm giảm giá
+                    'index': index, // Chỉ số sản phẩm trong danh sách
+                    'item_brand': product.dataset.itembrand, // Thương hiệu
+                    'item_category': product.dataset.category, // Danh mục
+                    'item_category2': product.dataset.category2, // Danh mục phụ
+                    'item_category3': product.dataset.category3, // Danh mục phụ 2
+                    'item_availability': product.dataset.available, // Tình trạng sản phẩm
+                    'item_list_name': "shopLook" + (parseInt(stl.dataset.slickIndex) + 1), // Tên danh sách sản phẩm
+                    'price': parseFloat(product.dataset.price), // Giá sản phẩm
+                    'quantity': 1 // Số lượng
+                };
+    
+                obj.push(prd); // Thêm sản phẩm vào danh sách
+            });
+    
+            return obj; // Trả về danh sách sản phẩm
+        }
+    
+        // Hàm theo dõi sự kiện xem danh sách sản phẩm trong "Shop the Look"
+        function viewStl() {
+            const stl = document.querySelector('#stl1'); // Lấy phần "Shop the Look"
+    
+            // Hàm kiểm tra xem phần tử có trong viewport không
+            const isInViewport = (el) => {
+                const rect = el?.getBoundingClientRect();
+                return (
+                    rect?.top >= 0 && rect?.top < window.innerHeight // Kiểm tra vị trí
+                );
+            }
+    
+            // Hàm xử lý sự kiện cuộn trang
+            const handleScroll = () => {
+                if (isInViewport(stl)) {
+                    window.removeEventListener("scroll", handleScroll); // Ngừng theo dõi sự kiện cuộn
+                    console.log("stl in view");
+                    window.dataLayer.push({
+                        'event': 'view_item_list', // Gửi sự kiện xem danh sách sản phẩm
+                        'ecommerce': {
+                            'items': getObjItemList(stl) // Lấy danh sách sản phẩm
+                        }
+                    });
+                }
+            }
+    
+            window.addEventListener("scroll", handleScroll, false); // Thêm sự kiện cuộn
+        }
+    
+        // Khi tài liệu được tải xong
+        window.addEventListener("DOMContentLoaded", (event) => {
+            selectItemTrackEvent(); // Gọi hàm theo dõi sự kiện chọn sản phẩm
+            viewStl(); // Gọi hàm theo dõi sự kiện xem danh sách
+        });
+    
+        // Theo dõi sự kiện cập nhật giỏ hàng
+        document.querySelector('.drawer')?.addEventListener("update-cart", () => {
+            let prodAdded = JSON.parse(document.querySelector("product-form script").innerText); // Lấy thông tin sản phẩm thêm vào giỏ
+            prodAdded["currency"] = Shopify.currency.active; // Tiền tệ
+            prodAdded["item_variant"] = document.querySelector(".prod-variant-custom-select")?.innerText; // Biến thể sản phẩm
+            prodAdded["price"] = parseFloat(prodAdded["price"]); // Giá
+            prodAdded["discount"] = parseFloat(prodAdded["discount"]); // Giảm giá
+            prodAdded["quantity"] = parseFloat(prodAdded["quantity"]); // Số lượng
+            dataLayer.push({
+                event: "add_to_cart", // Gửi sự kiện thêm vào giỏ hàng
+                ecommerce: {
+                    'items': [
+                        prodAdded // Thêm thông tin sản phẩm vào giỏ hàng
+                    ]
+                }
+            });
+        });
+    
+        // Theo dõi sự kiện xóa sản phẩm khỏi giỏ hàng
+        document.addEventListener("click", (e) => {
+            if (e.target.matches("cart-remove-button, cart-remove-button *")) {
+                let prodRemoved = JSON.parse(document.querySelector("cart-remove-button script").innerText); // Lấy thông tin sản phẩm bị xóa
+                prodRemoved["currency"] = Shopify.currency.active; // Tiền tệ
+                prodRemoved["price"] = parseFloat(prodRemoved["price"]); // Giá
+                prodRemoved["discount"] = parseFloat(prodRemoved["discount"]); // Giảm giá
+                prodRemoved["quantity"] = parseFloat(prodRemoved["quantity"]); // Số lượng
+                dataLayer.push({
+                    event: "remove_from_cart", // Gửi sự kiện xóa khỏi giỏ hàng
+                    ecommerce: {
+                        'items': [
+                            prodRemoved // Thêm thông tin sản phẩm đã xóa
+                        ]
+                    }
+                });
+            }
+    
+            // Theo dõi sự kiện click trên sản phẩm trong "Shop the Look"
+            if (e.target.matches(".shopthelook-wrp .stl-product-image, .shopthelook-wrp .stl-product-image *") || e.target.matches(".shopthelook-wrp .stl-product-text, .shopthelook-wrp .stl-product-text *")) {
+                trackEventSTL(e); // Gọi hàm theo dõi sự kiện chọn sản phẩm
+                localStorage.setItem("stl", "shopLook" + (parseInt(e.target.closest(".stl-slide-wrp").dataset.slickIndex) + 1)); // Lưu thông tin sản phẩm đã chọn
+                window.dataLayer.push({
+                    'event': 'gaEvent',
+                    'category': 'clickLook', // Danh mục sự kiện
+                    'action': "look" + e.target.closest(".stl-product").dataset.count, // Hành động click
+                    'label': e.target.closest(".stl-product").dataset.title // Nhãn sản phẩm
+                });
+            }
+    
+            // Theo dõi sự kiện click trên sản phẩm trong danh sách "Must Have"
+            if (e.target.matches(".slider-product-container .slick-slide, .slider-product-container .slick-slide *")) {
+                localStorage.setItem("must_have", "mustHave"); // Lưu thông tin sản phẩm
+                window.dataLayer.push({
+                    'event': 'gaEvent',
+                    'category': 'clickMustHave', // Danh mục sự kiện
+                    'action': "itemClicked", // Hành động click
+                    'label': e.target.closest(".slick-slide").dataset.title // Nhãn sản phẩm
+                });
+            }
+        });
+    </script>    
+</body>
+</html>

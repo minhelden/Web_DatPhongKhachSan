@@ -1,0 +1,44 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: url(../img/image_hotel.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  max-width: 700px;
+}
+
+h2 {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Button customization */
+.btn-primary {
+  background: rgb(130, 106, 251);
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: rgb(88, 56, 250);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(130, 106, 251, 0.25);
+}
