@@ -1,5 +1,57 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
 body {
     background-color: #f8f9fa;
+}
+
+.hotel-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.price {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-select-room {
+    background-color: #00b383;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-select-room:hover, .btn-select-room:focus {
+    background-color: #008c69;
+    color: white;
+}
+
+.btn-select-room:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 179, 131, 0.5);
+}
+
+@media (max-width: 768px) {
+    .card-body {
+        text-align: center;
+    }
+
+    .card-body .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price {
+        margin-bottom: 1rem;
+    }
 }
 
 .hotel-header {
