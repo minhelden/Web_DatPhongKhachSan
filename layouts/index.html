@@ -49,11 +49,23 @@
                             <li><a class="dropdown-item" href="#">Liên hệ chúng tôi</a></li>
                           </ul>
                         </li>
+                        <li id="info-user" class="nav-item dropdown">
+                          <a class="nav-link mx-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/img/germany.jpg" alt="" width="25" height="25" style="border-radius: 50px;">
+                            Hoàng Nghĩa
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>Chỉnh sửa hồ sơ</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-hotel me-2"></i>Đặt chỗ của tôi</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-money-bill me-2"></i>Danh sách giao dịch</a></li>
+                            <li><a id="logout-link" class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket me-2"></i>Đăng xuất</a></li>
+                          </ul>
+                        </li>
                       </ul>
                     </div>
                   </div>
-                  <a class="login-button me-2" href="#">Đăng nhập</a>
-                  <a class="register-button" href="#">Đăng ký</a>
+                  <a id="login-button" class="login-button me-2" href="#">Đăng nhập</a>
+                  <a id="register-button" class="register-button" href="#">Đăng ký</a>
                   <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -78,12 +90,22 @@
                       <div class="result-box text-black"></div>
                     </div>
                     <div class="row" style="width: 630px; max-width: 100%;">
-                      <div class="col-md-6 mt-3">
-                          <input type="date" class="form-control" id="arrival" aria-label="Arrival Date">
+                      <div class="col-md-6">
+                        <label for="guests" class="fs-6">Ngày đến</label>
+                        <input type="date" class="form-control" id="arrival" aria-label="Arrival Date">
                       </div>
-                      <div class="col-md-6 mt-3">
-                          <input type="date" class="form-control" id="departure" aria-label="Departure Date">
+                      <div class="col-md-6">
+                        <label for="guests" class="fs-6">Ngày đi</label>
+                        <input type="date" class="form-control" id="departure" aria-label="Departure Date">
                       </div>
+                      <div class="col-md-6">
+                        <label for="guests" class="fs-6">Số lượng khách</label>
+                        <input type="number" class="form-control" id="guests" value="1" min="1" aria-label="Number of Guests">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="rooms" class="fs-6">Số lượng phòng</label>
+                        <input type="number" class="form-control" id="rooms" value="1" min="1" aria-label="Number of Rooms">
+                    </div>
                     </div>
                     <div style="width: 600px; max-width: 100%;">
                       <button class="btn btn-primary w-100">Tìm kiếm</button>
@@ -313,7 +335,20 @@
           } else {
               backToTopButton.classList.remove('cd-top--is-visible');
           }
-      });
+        });
+        </script>
+      <script>
+        // Lấy ngày hôm nay
+        const today = new Date().toISOString().split('T')[0];
+        
+        // Lấy ngày mai
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const tomorrowDate = tomorrow.toISOString().split('T')[0];
+    
+        // Gán giá trị cho các input date
+        document.getElementById('arrival').value = today;
+        document.getElementById('departure').value = tomorrowDate;
       </script>
       <script src="/js/modernizr-2.6.2.min.js"></script>
       <script src="/js/class.js"></script>

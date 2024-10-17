@@ -97,7 +97,7 @@ function renderRoomID(rooms){
                     <h2 class="mt-3"><b>${room.TEN_KS}</b></h2>
                     <p><i class="fas fa-location-dot me-2" style="color: #00b383;"></i>${room.MA_VITRI_VITRI.TENVITRI}, ${room.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.TEN_TINHTHANH}, ${room.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.MA_QUOCGIA_QUOCGIum.TEN_QUOCGIA}</p>
                     <img src="/img/${duongDanHinh}" alt="..." class="img-fluid w-100">
-                    <div class="container my-5">
+                    <div class="container mt-5">
                         <div class="row">
                             <div class="col-lg-8">
                                 <section class="hotel-info mb-5">

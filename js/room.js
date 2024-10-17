@@ -108,34 +108,30 @@ async function renderRoomLocal(rooms) {
         const formattedGiaDaGiam = giaDaGiam !== null ? new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(giaDaGiam) : null;
 
         return `
-            <div class="d-flex justify-content-around mt-5">
-                <img src="/img/${duongDanHinh}" width="350" height="300" alt="">
-                <div class="ps-3 pt-3 flex-grow-1 details-hotel">
-                    <h4>${room.TEN_KS}</h4>
-                    <p class="room-location"><i class="fa-solid fa-location-dot me-2"></i>${room.MA_VITRI_VITRI.TENVITRI}, ${room.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.TEN_TINHTHANH}, ${room.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.MA_QUOCGIA_QUOCGIum.TEN_QUOCGIA}</p>
-                </div>
-                <div class="text-end flex-grow-1 pe-3 details-rate">
-                    <div>
-                        <div class="d-flex justify-content-end align-items-center mt-4">
-                            <div class="room-rate">
-                                <p class="mb-0">${ratingLabel}</p>
-                                <span class="room-comment">${totalReviews} nhận xét</span>
-                            </div>
-                            <div class="d">
-                                <svg width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="c" style="transform: none;">
-                                    <path d="M1.199 3.053H21.99a1.5 1.5 0 0 1 1.5 1.5v14.983a1.5 1.5 0 0 1-1.5 1.5H4.53a1.5 1.5 0 0 1-1.5-1.5V8.333a.5.5 0 0 0-.1-.3L.399 4.653a1 1 0 0 1 .8-1.6zm0 1l2.53 3.381c.195.26.3.575.3.9v11.202a.5.5 0 0 0 .5.5H21.99a.5.5 0 0 0 .5-.5V4.553a.5.5 0 0 0-.5-.5H1.2z"></path>
-                                </svg>
-                                <div class="a">
-                                    <span class="b">${averageRating}</span>
-                                </div>
+            <div class="col-md-12 mb-4">
+                <div class="card hotel-card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img class="rounded-start" src="/img/${duongDanHinh}" alt="Cozy Hotel Room">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">${room.TEN_KS}</h5>
+                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> ${room.MA_VITRI_VITRI.TENVITRI}, ${room.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.TEN_TINHTHANH}, ${room.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.MA_QUOCGIA_QUOCGIum.TEN_QUOCGIA}</p>
+                                <p class="card-text">
+                                    <span class="badge bg-success">${averageRating} <i class="fas fa-star"></i></span>
+                                    <small class="text-muted">(${totalReviews} nhận xét)</small>
+                                </p>
+                                <p class="card-text"><strong>${ratingLabel}</strong></p>
+                                <p class="card-text"><small class="text-muted">Tiết kiệm nhiều hơn và tận hưởng</small></p>
+                                <p class="card-text price-info">
+                                    ${giaDaGiam !== null ? `<span class="original-price">${formattedGiaGoc}</span>` : `<span class="discounted-price">${formattedGiaGoc}</span>`}
+                                    ${giaDaGiam !== null ? `<span class="discounted-price">${formattedGiaDaGiam}</span>` : ''}                              
+                               
+                                </p>
+                                <a href="/layouts/detailRoom.html?roomID=${room.MA_KS}" class="btn mb-3 select-room-btn" data-new-id="${room.MA_KS}">Chọn phòng</a>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <h6>Tiết kiệm nhiều hơn và tận hưởng</h6>
-                        ${giaDaGiam !== null ? `<p class="price-original">${formattedGiaGoc}</p>` : `<h4 class="price-discount">${formattedGiaGoc}</h4>`}
-                        ${giaDaGiam !== null ? `<h4 class="price-discount">${formattedGiaDaGiam}</h4>` : ''}
-                        <a href="/layouts/detailRoom.html?roomID=${room.MA_KS}" class="btn btn-outline-primary mb-3" data-new-id="${room.MA_KS}">Chọn phòng</a>
                     </div>
                 </div>
             </div>
@@ -160,34 +156,30 @@ async function renderRoomCountry(countries) {
         const formattedGiaDaGiam = giaDaGiam !== null ? new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(giaDaGiam) : null;
 
         return `
-            <div class="d-flex justify-content-around mt-5">
-                <img src="/img/${duongDanHinh}" width="350" height="300" alt="">
-                <div class="ps-3 pt-3 flex-grow-1 details-hotel">
-                    <h4>${country.TEN_KS}</h4>
-                    <p class="room-location"><i class="fa-solid fa-location-dot me-2"></i>${country.MA_VITRI_VITRI.TENVITRI}, ${country.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.TEN_TINHTHANH}, ${country.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.MA_QUOCGIA_QUOCGIum.TEN_QUOCGIA}</p>
-                </div>
-                <div class="text-end flex-grow-1 pe-3 details-rate">
-                    <div>
-                        <div class="d-flex justify-content-end align-items-center mt-4">
-                            <div class="room-rate">
-                                <p class="mb-0">${ratingLabel}</p>
-                                <span class="room-comment">${totalReviews} nhận xét</span>
-                            </div>
-                            <div class="d">
-                                <svg width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="c" style="transform: none;">
-                                    <path d="M1.199 3.053H21.99a1.5 1.5 0 0 1 1.5 1.5v14.983a1.5 1.5 0 0 1-1.5 1.5H4.53a1.5 1.5 0 0 1-1.5-1.5V8.333a.5.5 0 0 0-.1-.3L.399 4.653a1 1 0 0 1 .8-1.6zm0 1l2.53 3.381c.195.26.3.575.3.9v11.202a.5.5 0 0 0 .5.5H21.99a.5.5 0 0 0 .5-.5V4.553a.5.5 0 0 0-.5-.5H1.2z"></path>
-                                </svg>
-                                <div class="a">
-                                    <span class="b">${averageRating}</span>
-                                </div>
+            <div class="col-md-12 mb-4">
+                <div class="card hotel-card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img class="rounded-start" src="/img/${duongDanHinh}" alt="Cozy Hotel Room">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">${country.TEN_KS}</h5>
+                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> ${country.MA_VITRI_VITRI.TENVITRI}, ${country.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.TEN_TINHTHANH}, ${country.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.MA_QUOCGIA_QUOCGIum.TEN_QUOCGIA}</p>
+                                <p class="card-text">
+                                    <span class="badge bg-success">${averageRating} <i class="fas fa-star"></i></span>
+                                    <small class="text-muted">(${totalReviews} nhận xét)</small>
+                                </p>
+                                <p class="card-text"><strong>${ratingLabel}</strong></p>
+                                <p class="card-text"><small class="text-muted">Tiết kiệm nhiều hơn và tận hưởng</small></p>
+                                <p class="card-text price-info">
+                                    ${giaDaGiam !== null ? `<span class="original-price">${formattedGiaGoc}</span>` : `<span class="discounted-price">${formattedGiaGoc}</span>`}
+                                    ${giaDaGiam !== null ? `<span class="discounted-price">${formattedGiaDaGiam}</span>` : ''}                              
+                               
+                                </p>
+                                <a href="/layouts/detailRoom.html?roomID=${country.MA_KS}" class="btn mb-3 select-room-btn" data-new-id="${country.MA_KS}">Chọn phòng</a>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <h6>Tiết kiệm nhiều hơn và tận hưởng</h6>
-                        ${giaDaGiam !== null ? `<p class="price-original">${formattedGiaGoc}</p>` : `<h4 class="price-discount">${formattedGiaGoc}</h4>`}
-                        ${giaDaGiam !== null ? `<h4 class="price-discount">${formattedGiaDaGiam}</h4>` : ''}
-                        <a href="/layouts/detailRoom.html?roomID=${country.MA_KS}" class="btn btn-outline-primary mb-3" data-new-id="${country.MA_KS}">Chọn phòng</a>
                     </div>
                 </div>
             </div>

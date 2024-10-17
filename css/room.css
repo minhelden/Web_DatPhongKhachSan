@@ -1,78 +1,76 @@
-body {
-    background-color: #f8f9fa;
-}
-
-.a{
-    margin-right: 0px;
-    margin-left: 4px;
-    width: inherit;
-    height: inherit;
-    position: relative;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    display: inherit;
-    color: rgb(83, 146, 249);
-}
-
-.price-original{
-    text-decoration: line-through;
-}
-
-.price-discount{
-    color: red;
-}
-
-.room-comment{
-    font-size: 12px;
-    color: lightgray;
-}
-
-.room-rate{
-    line-height: 20px;
-}
-
-.room-location{
-    color: #5392f9;
-    font-size: 14px;
-}
-
-.b{ 
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 500;
-}
-
-.c{
-    fill: rgb(83, 146, 249);
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    font-size: 12px;
-
-}
-
-svg:not(:root) {
-    overflow: hidden;
-}
-
-.d {
-    margin-right: 0px;
-    margin-left: 8px;
-    width: 48px;
-    height: 48px;
-    position: relative;
-    order: 1;
-    display: flex;
-}
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.hotel-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-card img {
+    max-height: 100%;
+    height: 325px;
+    width: 350px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.select-room-btn {
+    background-color: #00b383;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.select-room-btn:hover {
+    background-color: #009e73;
+    transform: scale(1.05);
+}
+
+.price-info {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #6c757d;
+    margin-right: 5px;
+}
+
+.discounted-price {
+    font-size: 1.2em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hotel-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .hotel-card .row {
+        flex-direction: column;
+    }
+    
+    .hotel-card .col-md-4 {
+        height: 200px;
+    }
 }
 
 .details-hotel, .details-rate{
