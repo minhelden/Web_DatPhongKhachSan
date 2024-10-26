@@ -93,60 +93,59 @@ function renderRoomID(rooms) {
         return (
             result +
             `
-                <div class="container p-0">
-                    <h2 class="mt-3"><b>${room.TEN_KS}</b></h2>
-                    <p><i class="fas fa-location-dot me-2" style="color: #00b383;"></i>${room.MA_VITRI_VITRI.TENVITRI}, ${room.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.TEN_TINHTHANH}, ${room.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.MA_QUOCGIA_QUOCGIum.TEN_QUOCGIA}</p>
-                    <img src="/img/${duongDanHinh}" alt="..." class="img-fluid w-100">
-                    <div class="container mt-5">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <section class="hotel-info mb-5">
-                                    <h2 class="mb-4">Giới thiệu về chúng tôi</h2>
-                                    <p>${room.MO_TA}</p>
-                                    <ul class="list-group list-group-flush" id="convenients">
-                                        <li class="list-group-item"><i class="fas fa-wifi me-2"></i> Wifi miễn phí</li>
-                                        <li class="list-group-item"><i class="fas fa-swimming-pool me-2"></i> Bể bơi</li>
-                                        <li class="list-group-item"><i class="fas fa-utensils me-2"></i> Nhà hàng</li>
-                                        <li class="list-group-item"><i class="fas fa-spa me-2"></i> Spa</li>
-                                    </ul>
-                                </section>
-                                <section class="room-types mb-5">
-                                    <h2 class="mb-4">Đa dạng các loại phòng</h2>
-                                    <div class="accordion" id="roomAccordion">
-                                        <!-- Các phòng có thể được lặp lại từ data -->
+            <div class="container p-0">
+                <h2 class="mt-3"><b>${room.TEN_KS}</b></h2>
+                <p><i class="fas fa-location-dot me-2" style="color: #00b383;"></i>${room.MA_VITRI_VITRI.TENVITRI}, ${room.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.TEN_TINHTHANH}, ${room.MA_VITRI_VITRI.MA_TINHTHANH_TINHTHANH.MA_QUOCGIA_QUOCGIum.TEN_QUOCGIA}</p>
+                <img src="/img/${duongDanHinh}" alt="..." class="img-fluid w-100">
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <section class="hotel-info mb-5">
+                                <h2 class="mb-4">Giới thiệu về chúng tôi</h2>
+                                <p>${room.MO_TA}</p>
+                                <ul class="list-group list-group-flush" id="convenients">
+                                    <li class="list-group-item"><i class="fas fa-wifi me-2"></i> Wifi miễn phí</li>
+                                    <li class="list-group-item"><i class="fas fa-swimming-pool me-2"></i> Bể bơi</li>
+                                    <li class="list-group-item"><i class="fas fa-utensils me-2"></i> Nhà hàng</li>
+                                    <li class="list-group-item"><i class="fas fa-spa me-2"></i> Spa</li>
+                                </ul>
+                            </section>
+                            <section class="room-types mb-5">
+                                <h2 class="mb-4">Đa dạng các loại phòng</h2>
+                                <div class="accordion" id="roomAccordion">
+                                    <!-- Các phòng có thể được lặp lại từ data -->
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-lg-4">
+                            <section class="reviews mb-5">
+                                <h2 class="mb-4">Đánh giá của khách hàng</h2>
+                                <div id="rates"></div>
+                            </section>
+                            <section class="rating">
+                                <h2>Đánh giá của bạn</h2>
+                                <form id="reviewForm">
+                                    <div class="mb-3">
+                                        <label>Chọn số sao:</label>
+                                        <div id="ratingStars" class="star-rating">
+                                            <i class="far fa-star" data-rating="1"></i>
+                                            <i class="far fa-star" data-rating="2"></i>
+                                            <i class="far fa-star" data-rating="3"></i>
+                                            <i class="far fa-star" data-rating="4"></i>
+                                            <i class="far fa-star" data-rating="5"></i>
+                                        </div>
                                     </div>
-                                </section>
-                            </div>
-                            <div class="col-lg-4">
-                                <section class="reviews mb-5">
-                                    <h2 class="mb-4">Đánh giá của khách hàng</h2>
-                                    <div id="rates"></div>
-                                </section>
-                                <section class="rating">
-                                    <h2>Đánh giá của bạn</h2>
-                                    <form id="reviewForm">
-                                        <div class="mb-3">
-                                            <label>Chọn số sao:</label>
-                                            <div id="ratingStars" class="star-rating">
-                                                <i class="far fa-star" data-rating="1"></i>
-                                                <i class="far fa-star" data-rating="2"></i>
-                                                <i class="far fa-star" data-rating="3"></i>
-                                                <i class="far fa-star" data-rating="4"></i>
-                                                <i class="far fa-star" data-rating="5"></i>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="reviewText">Bình luận:</label>
-                                            <textarea class="form-control" id="reviewText" rows="3" placeholder="Nhập bình luận của bạn..." required></textarea>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Gửi đánh giá</button>
-                                    </form>
-                                </section>
-                            </div>
+                                    <div class="mb-3">
+                                        <label for="reviewText">Bình luận:</label>
+                                        <textarea class="form-control" id="reviewText" rows="3" placeholder="Nhập bình luận của bạn..." required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Gửi đánh giá</button>
+                                </form>
+                            </section>
                         </div>
                     </div>
-                </div> 
-            `
+                </div>
+            </div>`
         );
     }, "");
 
@@ -174,6 +173,17 @@ function renderRoomID(rooms) {
         const urlParams = new URLSearchParams(window.location.search);
         const roomID = urlParams.get('roomID');
 
+        // Kiểm tra xem rating có hợp lệ hay không
+        if (!rating || rating === "0") {
+            Swal.fire({
+                title: 'Lỗi',
+                text: 'Vui lòng chọn số sao trước khi gửi đánh giá!',
+                icon: 'warning',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
         try {
             const review = {
                 MA_KS: roomID,
@@ -182,7 +192,6 @@ function renderRoomID(rooms) {
             };
             await apiCreateReview(review);
 
-            // Hiển thị thông báo thành công với SweetAlert
             Swal.fire({
                 title: 'Thành công!',
                 text: 'Bạn đã đánh giá thành công!',
@@ -192,19 +201,29 @@ function renderRoomID(rooms) {
 
             // Thêm đánh giá mới vào danh sách hiển thị
             const newReviewHTML = `
-            <div class="card mt-3">
-                <div class="card-body">
-                    <h5 class="card-title">Nguyen Van Long</h5>
-                    <div class="star-rating mb-2">
-                        ${[...Array(5)].map((_, i) => i < rating ? '<i class="fas fa-star" style="color: #ffc107;"></i>' : '<i class="far fa-star" style="color: #ffc107;"></i>').join('')}
+                <div class="card mt-3" id="review-${roomID}">
+                    <div class="card-body">
+                        <h5 class="card-title">Nguyen Van Long</h5>
+                        <div class="star-rating mb-2" style="display: inline-block;">
+                            ${[...Array(5)].map((_, i) => i < rating ? '<i class="fas fa-star" style="color: #ffc107;"></i>' : '<i class="far fa-star" style="color: #ffc107;"></i>').join('')}
+                        </div>
+                        <div class="float-end">
+                            <div class="dropdown">
+                                <button class="btn btn-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" onclick="editReview(${roomID})">Chỉnh sửa</a></li>
+                                    <li><a class="dropdown-item text-danger" onclick="deleteReview(${roomID})">Xóa</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="card-text">${comment}</p>
+                        <p class="text-muted">— ${new Date().toISOString().split('T')[0]}</p>
                     </div>
-                    <p class="card-text">${comment}</p>
-                    <p class="text-muted">— ${new Date().toISOString().split('T')[0]}</p>
-                </div>
-            </div>
-            `;
+                </div>`;
+            
             document.getElementById('rates').insertAdjacentHTML('beforeend', newReviewHTML);
-
 
             // Xóa nội dung form sau khi thêm
             document.getElementById('reviewText').value = '';
@@ -221,35 +240,33 @@ function renderRoomID(rooms) {
 }
 
 
-
 function renderRateID(rates) {
     const html = rates.reduce((result, rate) => {
-        const solidStars = rate.SO_SAO; 
-        const outlineStars = 5 - solidStars; 
+        const solidStars = rate.SO_SAO;
+        const outlineStars = 5 - solidStars;
 
-        const starsHTML = 
-            '<i class="fas fa-star text-warning"></i> '.repeat(solidStars) +
-            '<i class="far fa-star text-warning"></i> '.repeat(outlineStars);
+        const starsHTML = `
+            <i class="fas fa-star text-warning"></i>`.repeat(solidStars) + 
+            `<i class="far fa-star text-warning"></i>`.repeat(outlineStars);
 
         return (
             result +
             `
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">${rate.MA_ND_NGUOIDUNG.HOTEN}</h5>
-                        <div class="mb-2">
-                            ${starsHTML}
-                        </div>
-                        <p class="card-text">${rate.BINH_LUAN}</p>
-                        <footer class="blockquote-footer">${rate.NGAY_DG}</footer>
-
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">${rate.MA_ND_NGUOIDUNG.HOTEN}</h5>
+                    <div class="mb-2">
+                        ${starsHTML}
                     </div>
+                    <p class="card-text">${rate.BINH_LUAN}</p>
+                    <footer class="blockquote-footer">${rate.NGAY_DG}</footer>
                 </div>
-            `
+            </div>`
         );
     }, "");
     document.getElementById("rates").innerHTML = html;
 }
+
 
 function renderDataRoom(rooms){
     const html = rooms.reduce((result, room) =>{
@@ -297,4 +314,5 @@ function renderConvenient(convenients) {
 
     document.getElementById("convenients").innerHTML = html;
 }
+
 
